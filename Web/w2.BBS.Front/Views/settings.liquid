@@ -1,0 +1,79 @@
+﻿{% _layout 'layout.liquid' %}
+
+{% _area title %}アカウント設定{% end_area %}
+
+{% _area head_resource %}
+{% end_area %}
+
+{% _area page_body %}
+<div>
+  <h1>アカウント設定</h1>
+
+  <p><a href="/Training.BBS/Web/w2.BBS.Front/forum">掲示板へ戻る</a></p>
+
+  {% if SuccessMessage != blank %}
+  <p>{{ SuccessMessage }}</p>
+  {% endif %}
+
+  {% if ErrorMessage != blank %}
+  <p>{{ ErrorMessage }}</p>
+  {% endif %}
+
+  <h2>プロフィール・パスワード</h2>
+  <p>ログインID（変更できません）: {{ LoginId }}</p>
+
+  <form method="post" action="/Training.BBS/Web/w2.BBS.Front/account/update">
+    <div>
+      <label for="userName">ユーザー名</label>
+      <input type="text" id="userName" name="UserName" value="{{ UserName }}" />
+    </div>
+    <div>
+      <label for="currentPassword">現在のパスワード（必須）</label>
+      <input type="password" id="currentPassword" name="CurrentPassword" value="" autocomplete="current-password" />
+    </div>
+    <div>
+      <label for="newPassword">新しいパスワード（変更しない場合は空）</label>
+      <input type="password" id="newPassword" name="NewPassword" value="" autocomplete="new-password" />
+    </div>
+    <div>
+      <label for="newPasswordConfirm">新しいパスワード（確認）</label>
+      <input type="password" id="newPasswordConfirm" name="NewPasswordConfirm" value="" autocomplete="new-password" />
+    </div>
+    <div>
+      <button type="submit">保存する</button>
+    </div>
+  </form>
+
+  <hr />
+
+  <h2>アカウント削除</h2>
+  <p>パスワードを入力して退会します。投稿・返信は表示されなくなります。</p>
+
+  <form method="post" action="/Training.BBS/Web/w2.BBS.Front/account/delete" id="form-delete-account">
+    <div>
+      <label for="deletePassword">パスワード</label>
+      <input type="password" id="deletePassword" name="DeletePassword" value="" autocomplete="current-password" />
+    </div>
+    <div>
+      <button type="submit">アカウントを削除する</button>
+    </div>
+  </form>
+
+  <script>
+    (function () {
+      const form = document.getElementById('form-delete-account');
+      if (!form) {
+        return;
+      }
+      form.addEventListener('submit', function (e) {
+        if (window.confirm('アカウントを削除しますか？この操作は取り消せません。') === false) {
+          e.preventDefault();
+        }
+      });
+    })();
+  </script>
+</div>
+{% end_area %}
+
+{% _area component %}
+{% end_area %}

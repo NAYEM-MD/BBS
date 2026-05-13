@@ -1,0 +1,8 @@
+is_global = true
+build_property.RootNamespace = w2.WebFrontDomain
+build_property.ProjectDir = C:\inetpub\wwwroot\Training.BBS\Commons\w2.WebFrontDomain\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

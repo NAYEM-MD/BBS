@@ -1,0 +1,72 @@
+﻿{% _layout 'layout.liquid' %}
+
+{% _area title %}トップページ{% end_area %}
+
+{% _area head_resource %}
+{% end_area %}
+
+{% _area page_body %}
+<h1>{{ Message }}</h1>
+<vue-index></vue-index>
+{% end_area %}
+
+{% _area component %}
+<script type="text/x-template" id="vue-index">
+  <p>${ message }</p>
+  <div>
+    <input type="text" v-model="message" />
+    <button @click="updateMessage()">DB更新</button>
+    <p v-if="stateMessage">${ stateMessage }</p>
+  </div>
+</script>
+{% end_area %}
+
+<script>
+  {% _javascript key: "onload" %}
+  g_vueManager.setComponent('vue-index', {
+    template: '#vue-index',
+    data() {
+      return {
+        message: null,
+        stateMessage: null,
+      }
+    },
+    mounted() {
+      this.getMessage().then(msg => {
+        this.message = msg.Message;
+      })
+    },
+    methods: {
+      getMessage: function () {
+        return fetch(window.apiRoot + '/get-message').then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP ${res.status}`);
+          }
+
+          return response.json();
+        });
+      },
+      updateMessage: function () {
+        const options = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ message: this.message }),
+        }
+
+        const promise = fetch(window.apiRoot + '/update-message', options)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`HTTP ${res.status}`);
+            }
+
+            this.stateMessage = 'DB更新完了!';
+
+            return response.json();
+          });
+      }
+    }
+  });
+  {% end_javascript %}
+</script>

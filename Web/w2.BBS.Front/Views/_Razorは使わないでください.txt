@@ -1,0 +1,8 @@
+ASP.NET MVCのViewエンジンはRazorが標準ですが、
+W2ではECサイトのデザインをお客様にも編集できるようにしている関係でよりEC業界に馴染み深いLiquidを採用しています。
+
+Liquid Template Language（Liquidテンプレート言語）って何者？
+https://ascii.jp/elem/000/004/058/4058982/
+
+Liquidの.NET実装
+https://github.com/sebastienros/fluid

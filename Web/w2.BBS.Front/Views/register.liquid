@@ -1,0 +1,43 @@
+﻿{% _layout 'layout.liquid' %}
+
+{% _area title %}会員登録{% end_area %}
+
+{% _area head_resource %}
+{% end_area %}
+
+{% _area page_body %}
+<div>
+  <h1>会員登録</h1>
+
+  {% if ErrorMessage != blank %}
+  <p>{{ ErrorMessage }}</p>
+  {% endif %}
+
+  <form method="post" action="/Training.BBS/Web/w2.BBS.Front/auth/register">
+    <div>
+      <label for="loginId">ログインID</label>
+      <input type="text" id="loginId" name="LoginId" value="{{ LoginId }}" />
+    </div>
+    <div>
+      <label for="userName">ユーザー名</label>
+      <input type="text" id="userName" name="UserName" value="{{ UserName }}" />
+    </div>
+
+    <div>
+      <label for="password">パスワード</label>
+      <input type="password" id="password" name="Password" value="{{ Password }}" />
+    </div>
+
+    <div>
+      <button type="submit">登録する</button>
+    </div>
+  </form>
+
+  <div>
+    <a href="/Training.BBS/Web/w2.BBS.Front/auth/login">ログイン画面へ戻る</a>
+  </div>
+</div>
+{% end_area %}
+
+{% _area component %}
+{% end_area %}

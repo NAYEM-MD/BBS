@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="email=no,telephone=no,address=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <script src="https://cdn.jsdelivr.net/npm/mitt@3.0.0/dist/mitt.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.5.13/dist/vue.global.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@3.7.3/dist/vuetify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+  <title>{% _render_area title %}</title>
+  {% _render_area head_resource %}
+
+  <script src="{{ RootUrl | append: "/scripts/vue_manager.js" | hard_reload }}"></script>
+
+  {% _render_area component %}
+
+  <script>
+    let g_vueManager = null;
+
+    window.addEventListener('DOMContentLoaded', _ => {
+      g_vueManager = new VueManager();
+
+      {% _render_javascript onload %}
+
+      g_vueManager.mount();
+    });
+
+    window.apiRoot = window.apiRoot || '{{ RootUrl }}'
+  </script>
+</head>
+<body>
+  <div id="rootTemplate">
+    {% _render_area page_body %}
+  </div>
+
+  {% _render_area foot_resource %}
+</body>
+</html>

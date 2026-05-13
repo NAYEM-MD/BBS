@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+	<Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="IsExternalInit" Version="1.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Nullable" Version="1.3.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="SqlKata" Version="2.4.0" />
+    <PackageReference Include="SqlKata.Execution" Version="2.4.0" />
+    <PackageReference Include="Unity" Version="5.11.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\w2.AccountDomain\w2.AccountDomain.csproj" />
+    <ProjectReference Include="..\w2.ForumDomain\w2.ForumDomain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="w2.Common">
+      <HintPath>..\..\lib\w2.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="w2.FoundationDomain">
+      <HintPath>..\..\lib\w2.FoundationDomain.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

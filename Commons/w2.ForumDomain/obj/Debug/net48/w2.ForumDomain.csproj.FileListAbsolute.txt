@@ -21,3 +21,4 @@ C:\inetpub\wwwroot\Training.BBS\Commons\w2.ForumDomain\obj\Debug\net48\w2.ForumD
 C:\inetpub\wwwroot\Training.BBS\Commons\w2.ForumDomain\obj\Debug\net48\w2.Forum.FC964AA1.Up2Date
 C:\inetpub\wwwroot\Training.BBS\Commons\w2.ForumDomain\obj\Debug\net48\w2.ForumDomain.dll
 C:\inetpub\wwwroot\Training.BBS\Commons\w2.ForumDomain\obj\Debug\net48\w2.ForumDomain.pdb
+C:\inetpub\wwwroot\Training.BBS\Commons\w2.ForumDomain\obj\Debug\net48\w2.ForumDomain.sourcelink.json

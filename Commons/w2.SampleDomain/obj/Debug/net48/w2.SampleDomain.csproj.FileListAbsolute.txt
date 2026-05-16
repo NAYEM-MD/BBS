@@ -21,3 +21,4 @@ C:\inetpub\wwwroot\Training.BBS\Commons\w2.SampleDomain\obj\Debug\net48\w2.Sampl
 C:\inetpub\wwwroot\Training.BBS\Commons\w2.SampleDomain\obj\Debug\net48\w2.Sampl.0850A77E.Up2Date
 C:\inetpub\wwwroot\Training.BBS\Commons\w2.SampleDomain\obj\Debug\net48\w2.SampleDomain.dll
 C:\inetpub\wwwroot\Training.BBS\Commons\w2.SampleDomain\obj\Debug\net48\w2.SampleDomain.pdb
+C:\inetpub\wwwroot\Training.BBS\Commons\w2.SampleDomain\obj\Debug\net48\w2.SampleDomain.sourcelink.json

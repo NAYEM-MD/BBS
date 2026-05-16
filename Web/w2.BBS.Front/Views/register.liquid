@@ -3,14 +3,17 @@
 {% _area title %}会員登録{% end_area %}
 
 {% _area head_resource %}
+<link rel="stylesheet" href="{{ RootUrl | append: '/styles/style.css' | hard_reload }}" />
 {% end_area %}
 
 {% _area page_body %}
-<div>
+<div class="register-container">
   <h1>会員登録</h1>
 
   {% if ErrorMessage != blank %}
-  <p>{{ ErrorMessage }}</p>
+  <div class="messages">
+    <p>{{ ErrorMessage }}</p>
+  </div>
   {% endif %}
 
   <form method="post" action="/Training.BBS/Web/w2.BBS.Front/auth/register">
@@ -33,7 +36,7 @@
     </div>
   </form>
 
-  <div>
+  <div class="footer-link">
     <a href="/Training.BBS/Web/w2.BBS.Front/auth/login">ログイン画面へ戻る</a>
   </div>
 </div>

@@ -1,4 +1,4 @@
-﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -140,6 +140,7 @@
     </Content>
     <Content Include="Global.asax" />
     <Content Include="Scripts\vue_manager.js" />
+    <Content Include="styles\style.css" />
     <Content Include="Web.config" />
     <Content Include="Xml\Db\Sample.xml" />
   </ItemGroup>
@@ -165,8 +166,10 @@
     <Compile Include="ViewModels\AuthRegisterViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\ForumActionResponseViewModel.cs" />
+    <Compile Include="ViewModels\ForumDetailViewModel.cs" />
     <Compile Include="ViewModels\ForumIndexViewModel.cs" />
     <Compile Include="ViewModels\ForumListResponseViewModel.cs" />
+    <Compile Include="ViewModels\ForumPostDetailResponseViewModel.cs" />
     <Compile Include="ViewModels\ForumPostViewModel.cs" />
     <Compile Include="ViewModels\ForumReplyViewModel.cs" />
     <Compile Include="ViewModels\IndexViewModel.cs" />
@@ -181,6 +184,7 @@
     <Content Include="Views\register.liquid" />
     <Content Include="Views\forum.liquid" />
     <Content Include="Views\settings.liquid" />
+    <Content Include="Views\forum_detail.liquid" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

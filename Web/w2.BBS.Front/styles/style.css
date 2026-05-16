@@ -1,0 +1,332 @@
+﻿@charset "UTF-8";
+
+/* ===== Basic colors ===== */
+:root {
+  --bg: #f4f7f6;
+  --card: #ffffff;
+  --soft: #f8fafc;
+  --border: #e2e8f0;
+  --text: #0f172a;
+  --muted: #64748b;
+  --blue: #2563eb;
+  --green: #22c55e;
+  --red: #dc2626;
+  --shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+  --radius: 12px;
+}
+
+/* ===== Common ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(#eef2f7, #e2e8f0);
+  color: var(--text);
+  font-family: system-ui, "Segoe UI", Meiryo, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+hr.rule {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+
+/* ===== Page layout ===== */
+.page-wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 88px 20px 48px;
+}
+
+.page-title {
+  margin: 0 0 8px;
+  font-size: 1.8rem;
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.text-strong {
+  font-weight: 600;
+}
+
+/* ===== Top right buttons ===== */
+.forum-toolbar {
+  position: fixed;
+  top: 14px;
+  right: 18px;
+  z-index: 1000;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.forum-toolbar__logout {
+  margin: 0;
+}
+
+/* ===== Card ===== */
+.card,
+.login-container,
+.register-container {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.section-title {
+  margin: 0 0 16px;
+  font-size: 0.8rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ===== Form ===== */
+.field {
+  margin-bottom: 16px;
+}
+
+label,
+.field__label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.input,
+input:not([type="hidden"]),
+textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  font-size: 1rem;
+}
+
+  textarea,
+  textarea.input {
+    max-width: 100%;
+    min-height: 120px;
+    resize: vertical;
+  }
+
+    .input:focus,
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+    }
+
+/* ===== Buttons ===== */
+.btn,
+button,
+input[type="submit"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--green);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+  .btn:hover,
+  button:hover,
+  input[type="submit"]:hover {
+    filter: brightness(1.05);
+  }
+
+.btn--primary {
+  background: var(--blue);
+}
+
+.btn--success {
+  background: var(--green);
+}
+
+.btn--danger {
+  background: var(--red);
+}
+
+.btn--outline,
+.btn--ghost,
+.btn--outline-dark {
+  background: #fff;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn--sm {
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+/* ===== Post list ===== */
+.post-list {
+  margin-top: 8px;
+}
+
+.post-card {
+  display: block;
+  margin-bottom: 12px;
+  padding: 16px 18px;
+  background: var(--soft);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+  .post-card:hover {
+    background: #fff;
+    box-shadow: var(--shadow);
+    transform: translateY(-1px);
+  }
+
+.post-card__title {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+}
+
+.post-card__body,
+.detail-body {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.post-card__meta {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* ===== Login / Register ===== */
+.login-container,
+.register-container {
+  max-width: 400px;
+  margin: 40px auto;
+}
+
+  .login-container input,
+  .register-container input,
+  .login-container button,
+  .register-container button {
+    max-width: 100%;
+    width: 100%;
+  }
+
+.footer-link,
+.messages {
+  margin-top: 16px;
+}
+
+/* ===== Settings page ===== */
+.settings-page {
+  max-width: 720px;
+}
+
+.settings-msg,
+.alert-box p {
+  padding: 12px 16px;
+  background: var(--soft);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.settings-card-head,
+.settings-danger-head {
+  margin: 24px 0 0;
+  padding: 22px 24px 8px;
+  background: var(--soft);
+  border: 1px solid var(--border);
+  border-bottom: 0;
+  border-radius: var(--radius) var(--radius) 0 0;
+  font-weight: 700;
+}
+
+.settings-danger-head {
+  color: var(--red);
+  background: #fff7f7;
+}
+
+.settings-card-sub,
+.settings-danger-sub,
+.settings-form,
+.settings-danger-form {
+  padding: 8px 24px 24px;
+  background: var(--soft);
+  border: 1px solid var(--border);
+}
+
+.settings-form,
+.settings-danger-form {
+  margin-bottom: 28px;
+  border-top: 0;
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+/* ===== Detail / Reply ===== */
+.detail-card {
+  margin-bottom: 16px;
+}
+
+.reply-title {
+  margin: 16px 0 12px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.reply-line {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.detail-actions {
+  margin-top: 12px;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 640px) {
+  .page-wrap {
+    padding: 80px 14px 32px;
+  }
+
+  .forum-toolbar {
+    right: 10px;
+    gap: 6px;
+  }
+
+  .btn,
+  button,
+  input[type="submit"] {
+    padding: 10px 14px;
+  }
+}

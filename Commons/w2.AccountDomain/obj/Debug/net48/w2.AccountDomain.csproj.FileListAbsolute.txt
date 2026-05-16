@@ -21,3 +21,4 @@ C:\inetpub\wwwroot\Training.BBS\Commons\w2.AccountDomain\obj\Debug\net48\w2.Acco
 C:\inetpub\wwwroot\Training.BBS\Commons\w2.AccountDomain\obj\Debug\net48\w2.Accou.1410A0CF.Up2Date
 C:\inetpub\wwwroot\Training.BBS\Commons\w2.AccountDomain\obj\Debug\net48\w2.AccountDomain.dll
 C:\inetpub\wwwroot\Training.BBS\Commons\w2.AccountDomain\obj\Debug\net48\w2.AccountDomain.pdb
+C:\inetpub\wwwroot\Training.BBS\Commons\w2.AccountDomain\obj\Debug\net48\w2.AccountDomain.sourcelink.json

@@ -25,3 +25,4 @@ C:\inetpub\wwwroot\Training.BBS\Commons\w2.WebFrontDomain\obj\Debug\net48\w2.Web
 C:\inetpub\wwwroot\Training.BBS\Commons\w2.WebFrontDomain\obj\Debug\net48\w2.WebFr.EDEBDE0B.Up2Date
 C:\inetpub\wwwroot\Training.BBS\Commons\w2.WebFrontDomain\obj\Debug\net48\w2.WebFrontDomain.dll
 C:\inetpub\wwwroot\Training.BBS\Commons\w2.WebFrontDomain\obj\Debug\net48\w2.WebFrontDomain.pdb
+C:\inetpub\wwwroot\Training.BBS\Commons\w2.WebFrontDomain\obj\Debug\net48\w2.WebFrontDomain.sourcelink.json

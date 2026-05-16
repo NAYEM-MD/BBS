@@ -3,96 +3,69 @@
 {% _area title %}掲示板{% end_area %}
 
 {% _area head_resource %}
+<link rel="stylesheet" href="{{ RootUrl | append: '/styles/style.css' | hard_reload }}" />
 {% end_area %}
 
 {% _area page_body %}
-<div>
- <h1>掲示板</h1>
-  <p>ログインしました。</p>
-  <p>ユーザー名: {{ LoginUserName }}</p>
-  <p><a href="/Training.BBS/Web/w2.BBS.Front/account/settings">設定</a></p>
-  <form method="post" action="/Training.BBS/Web/w2.BBS.Front/auth/logout">
-    <button type="submit">ログアウト</button>
-  </form>
-  <hr />
-<vue-forum></vue-forum>
+<div class="page-wrap forum-page">
+  <h1 class="page-title page-title--with-toolbar">掲示板</h1>
+  <p class="text-muted">ログインしました。</p>
+  <p class="text-strong">ユーザー名: {{ LoginUserName }}</p>
+  <div class="forum-toolbar">
+    <a class="btn btn--outline btn--sm" href="/Training.BBS/Web/w2.BBS.Front/account/settings">設定</a>
+    <form class="forum-toolbar__logout" method="post" action="/Training.BBS/Web/w2.BBS.Front/auth/logout">
+      <button type="submit" class="btn btn--success btn--sm">ログアウト</button>
+    </form>
+  </div>
+  <hr class="rule" />
+  <vue-forum></vue-forum>
 </div>
 {% end_area %}
 
 {% _area component %}
 <script type="text/x-template" id="vue-forum-template">
-  <div>
-    <h2>新規投稿</h2>
+  <div class="card">
+    <h2 class="section-title">新規投稿</h2>
 
-    <div>
+    <div class="alert-box">
       <p v-if="message">${ message }</p>
       <p v-if="errorMessage">${ errorMessage }</p>
     </div>
 
-    <div>
-      <label for="postTitle">タイトル</label>
-      <input type="text" id="postTitle" v-model="newTitle" />
+    <div class="field">
+      <label class="field__label" for="postTitle">タイトル</label>
+      <input class="input" type="text" id="postTitle" v-model="newTitle" />
     </div>
 
-    <div>
-      <label for="postBody">本文</label>
-      <textarea id="postBody" v-model="newBody"></textarea>
+    <div class="field">
+      <label class="field__label" for="postBody">本文</label>
+      <textarea class="input" id="postBody" v-model="newBody"></textarea>
     </div>
 
-    <div>
-      <button @click="createPost" :disabled="isSaving">投稿する</button>
+    <div class="field">
+      <button class="btn btn--primary" type="button" @click="createPost" :disabled="isSaving">投稿する</button>
     </div>
 
-    <hr />
+    <hr class="rule" />
 
-    <h2>投稿一覧</h2>
+    <h2 class="section-title">投稿一覧</h2>
 
-    <p v-if="hasPosts === false">投稿はまだありません。</p>
+    <p v-if="hasPosts === false" class="text-empty">投稿はまだありません。</p>
 
-    <div v-for="post in posts" :key="post.PostId">
-      <div v-if="editingPostId === post.PostId">
-        <div>
-          <label>タイトル</label>
-          <input type="text" v-model="editTitle" />
-        </div>
-        <div>
-          <label>本文</label>
-          <textarea v-model="editBody"></textarea>
-        </div>
-        <button @click="saveEdit(post.PostId)" :disabled="isUpdating">保存</button>
-        <button @click="cancelEdit" :disabled="isUpdating">キャンセル</button>
-      </div>
-
-      <div v-else>
-        <h3>${ post.Title }</h3>
-        <p>投稿者: ${ post.UserName }</p>
-        <p>${ post.Body }</p>
-
-        <h4>返信</h4>
-        <div v-for="reply in (post.Replies || [])" :key="reply.ReplyId">
-          <p><strong>${ reply.UserName }</strong>: ${ reply.Body }</p>
-        </div>
-        <div>
-          <label :for="'reply-' + post.PostId">返信を書く</label>
-          <textarea :id="'reply-' + post.PostId" rows="2" v-model="replyDraft[post.PostId]"></textarea>
-        </div>
-        <div>
-          <button type="button" @click="submitReply(post.PostId)" :disabled="replySavingPostId === post.PostId">返信する</button>
-        </div>
-
-        <div v-if="post.CanEdit">
-          <button @click="startEdit(post)">編集</button>
-          <button @click="deletePost(post.PostId)" :disabled="isDeletingId === post.PostId">削除</button>
-        </div>
-      </div>
-
-      <hr />
+    <div v-if="hasPosts" class="post-list">
+      <article v-for="post in posts" :key="post.PostId" class="post-card">
+        <h3 class="post-card__title">
+          <a :href="'/Training.BBS/Web/w2.BBS.Front/forum/' + post.PostId">${ post.Title }</a>
+        </h3>
+        <p class="post-card__body">${ post.Body }</p>
+        <small class="post-card__meta">投稿者: ${ post.UserName }</small>
+      </article>
     </div>
 
-    <div>
-      <button @click="movePage(page - 1)" :disabled="canPrevPage === false">前へ</button>
-      <span>${ pageLabel }</span>
-      <button @click="movePage(page + 1)" :disabled="canNextPage === false">次へ</button>
+    <div class="pager">
+      <button class="btn btn--ghost" type="button" @click="movePage(page - 1)" :disabled="canPrevPage === false">前へ</button>
+      <span class="pager__label">${ pageLabel }</span>
+      <button class="btn btn--ghost" type="button" @click="movePage(page + 1)" :disabled="canNextPage === false">次へ</button>
     </div>
   </div>
 </script>
@@ -112,13 +85,6 @@
         message: '',
         errorMessage: '',
         isSaving: false,
-        editingPostId: null,
-        editTitle: '',
-        editBody: '',
-        isUpdating: false,
-        isDeletingId: null,
-        replyDraft: {},
-        replySavingPostId: null,
       };
     },
     computed: {
@@ -139,142 +105,6 @@
       this.loadPosts(1);
     },
     methods: {
-      startEdit(post) {
-        this.editingPostId = post.PostId;
-        this.editTitle = post.Title;
-        this.editBody = post.Body;
-        this.message = '';
-        this.errorMessage = '';
-      },
-      cancelEdit() {
-        this.editingPostId = null;
-        this.editTitle = '';
-        this.editBody = '';
-      },
-      saveEdit(postId) {
-        this.message = '';
-        this.errorMessage = '';
-
-        const params = new URLSearchParams();
-        params.append('postId', postId);
-        params.append('title', this.editTitle);
-        params.append('body', this.editBody);
-
-        this.isUpdating = true;
-
-        fetch('/Training.BBS/Web/w2.BBS.Front/api/forum/update', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-          },
-          body: params.toString(),
-        })
-          .then((response) => {
-            if (response.ok === false) {
-              throw new Error(`HTTP ${response.status}`);
-            }
-            return response.json();
-          })
-          .then((result) => {
-            if (result.IsSuccess === false) {
-              this.errorMessage = result.Message;
-              return;
-            }
-
-            this.message = result.Message;
-            this.cancelEdit();
-            return this.loadPosts(this.page);
-          })
-          .catch(() => {
-            this.errorMessage = '投稿の更新に失敗しました。';
-          })
-          .finally(() => {
-            this.isUpdating = false;
-          });
-      },
-      deletePost(postId) {
-        if (window.confirm('この投稿を削除しますか？') === false) {
-          return;
-        }
-
-        this.message = '';
-        this.errorMessage = '';
-
-        const params = new URLSearchParams();
-        params.append('postId', postId);
-
-        this.isDeletingId = postId;
-
-        fetch('/Training.BBS/Web/w2.BBS.Front/api/forum/delete', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-          },
-          body: params.toString(),
-        })
-          .then((response) => {
-            if (response.ok === false) {
-              throw new Error(`HTTP ${response.status}`);
-            }
-            return response.json();
-          })
-          .then((result) => {
-            if (result.IsSuccess === false) {
-              this.errorMessage = result.Message;
-              return;
-            }
-
-            this.message = result.Message;
-            return this.loadPosts(this.page);
-          })
-          .catch(() => {
-            this.errorMessage = '投稿の削除に失敗しました。';
-          })
-          .finally(() => {
-            this.isDeletingId = null;
-          });
-      },
-      submitReply(postId) {
-        this.message = '';
-        this.errorMessage = '';
-        const body = (this.replyDraft[postId] || '').trim();
-        if (body.length === 0) {
-          this.errorMessage = '返信本文を入力してください。';
-          return;
-        }
-        const params = new URLSearchParams();
-        params.append('postId', postId);
-        params.append('body', body);
-        this.replySavingPostId = postId;
-        fetch('/Training.BBS/Web/w2.BBS.Front/api/forum/reply', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-          },
-          body: params.toString(),
-        })
-          .then((response) => {
-            if (response.ok === false) {
-              throw new Error(`HTTP ${response.status}`);
-            }
-            return response.json();
-          })
-          .then((result) => {
-            if (result.IsSuccess === false) {
-              this.errorMessage = result.Message;
-              return;
-            }
-            this.message = result.Message;
-            this.replyDraft = { ...this.replyDraft, [postId]: '' };
-            return this.loadPosts(this.page);
-          })
-          .catch(() => {
-            this.errorMessage = '返信に失敗しました。';
-          })
-          .finally(() => {
-            this.replySavingPostId = null;
-          });
-      },
       loadPosts(page) {
         const url = `/Training.BBS/Web/w2.BBS.Front/api/forum/posts?page=${page}`;
 
@@ -293,15 +123,6 @@
             }
 
             this.posts = result.Posts;
-
-            const nextDraft = { ...this.replyDraft };
-            this.posts.forEach((p) => {
-              if (nextDraft[p.PostId] === undefined) {
-                nextDraft[p.PostId] = '';
-              }
-            });
-            this.replyDraft = nextDraft;
-
             this.page = result.Page;
             this.pageCount = result.PageCount;
             this.totalCount = result.TotalCount;

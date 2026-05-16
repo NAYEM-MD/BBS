@@ -14,6 +14,7 @@ namespace w2.BBS.Front.Controller
 	public class ForumController : BaseController
 	{
 		private const string VIEW_FORUM = "forum.liquid";
+		private const string VIEW_FORUM_DETAIL = "forum_detail.liquid";
 
 		private const string SESSION_KEY_LOGIN_USER_ID = "LoginUserId";
 		private const string SESSION_KEY_LOGIN_USER_NAME = "LoginUserName";
@@ -54,6 +55,22 @@ ORDER BY
 	p.post_id DESC
 OFFSET @offset ROWS
 FETCH NEXT @page_size ROWS ONLY";
+
+		private const string SQL_SELECT_POST_BY_ID =
+@"SELECT
+	p.post_id,
+	p.user_id,
+	u.user_name,
+	p.title,
+	p.body
+FROM w2_ForumPost p
+INNER JOIN w2_User u ON
+(
+	p.user_id = u.user_id
+	AND u.del_flg = 0
+)
+WHERE p.del_flg = 0
+	AND p.post_id = @post_id";
 
 		private const string SQL_INSERT_POST =
 @"INSERT w2_ForumPost
@@ -109,7 +126,7 @@ VALUES
 )";
 
 		/// <summary>
-		/// 掲示板トップ
+		/// 掲示板トップ（一覧）
 		/// </summary>
 		[HttpGet]
 		[Route("~/forum")]
@@ -131,9 +148,36 @@ VALUES
 		}
 
 		/// <summary>
-		/// 投稿一覧取得
+		/// 投稿詳細ページ
 		/// </summary>
-		/// <param name="page">ページ番号</param>
+		[HttpGet]
+		[Route("~/forum/{postId:int}")]
+		public ActionResult Detail(int postId)
+		{
+			var loginUserId = this.GetLoginUserId();
+			if (loginUserId is null)
+			{
+				return this.Redirect("~/auth/login");
+			}
+
+			if (this.PostExists(postId) == false)
+			{
+				return this.Redirect("~/forum");
+			}
+
+			var model = new ForumDetailViewModel
+			{
+				LoginUserId = loginUserId.Value,
+				LoginUserName = Convert.ToString(this.Session[SESSION_KEY_LOGIN_USER_NAME]),
+				PostId = postId,
+			};
+
+			return base.View(VIEW_FORUM_DETAIL, model);
+		}
+
+		/// <summary>
+		/// 投稿一覧取得（返信なし・一覧用）
+		/// </summary>
 		[HttpGet]
 		[Route("~/api/forum/posts")]
 		public ActionResult Posts(int page = 1)
@@ -158,7 +202,6 @@ VALUES
 			}
 
 			var posts = this.GetPostList(currentPage, loginUserId.Value);
-			this.AttachRepliesToPosts(posts, loginUserId.Value);
 
 			return this.JsonForJs(new ForumListResponseViewModel
 			{
@@ -167,6 +210,42 @@ VALUES
 				Page = currentPage,
 				PageCount = pageCount,
 				TotalCount = totalCount,
+			});
+		}
+
+		/// <summary>
+		/// 投稿1件取得（返信付き・詳細用）
+		/// </summary>
+		[HttpGet]
+		[Route("~/api/forum/post")]
+		public ActionResult Post(int postId)
+		{
+			var loginUserId = this.GetLoginUserId();
+			if (loginUserId is null)
+			{
+				return this.JsonForJs(new ForumPostDetailResponseViewModel
+				{
+					IsSuccess = false,
+					Message = MESSAGE_LOGIN_REQUIRED,
+				});
+			}
+
+			var post = this.GetPostById(postId, loginUserId.Value);
+			if (post is null)
+			{
+				return this.JsonForJs(new ForumPostDetailResponseViewModel
+				{
+					IsSuccess = false,
+					Message = MESSAGE_POST_NOT_FOUND,
+				});
+			}
+
+			this.AttachRepliesToPosts(new[] { post }, loginUserId.Value);
+
+			return this.JsonForJs(new ForumPostDetailResponseViewModel
+			{
+				IsSuccess = true,
+				Post = post,
 			});
 		}
 
@@ -309,6 +388,41 @@ VALUES
 				using (var command = new SqlCommand(SQL_SELECT_POST_COUNT, connection))
 				{
 					return Convert.ToInt32(command.ExecuteScalar());
+				}
+			}
+		}
+
+
+		private ForumPostViewModel GetPostById(int postId, int loginUserId)
+		{
+			using (var connection = new SqlConnection(Constants.STRING_SQL_CONNECTION))
+			{
+				connection.Open();
+
+				using (var command = new SqlCommand(SQL_SELECT_POST_BY_ID, connection))
+				{
+					command.Parameters.AddWithValue("@post_id", postId);
+
+					using (var reader = command.ExecuteReader())
+					{
+						if (reader.Read() == false)
+						{
+							return null;
+						}
+
+						var postUserId = Convert.ToInt32(reader["user_id"]);
+
+						return new ForumPostViewModel
+						{
+							PostId = Convert.ToInt32(reader["post_id"]),
+							UserId = postUserId,
+							UserName = Convert.ToString(reader["user_name"]),
+							Title = Convert.ToString(reader["title"]),
+							Body = Convert.ToString(reader["body"]),
+							CanEdit = (postUserId == loginUserId),
+							Replies = Array.Empty<ForumReplyViewModel>(),
+						};
+					}
 				}
 			}
 		}

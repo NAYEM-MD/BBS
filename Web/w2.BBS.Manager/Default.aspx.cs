@@ -1,6 +1,4 @@
-﻿// (c) 2025 W2 Co.,Ltd.
-
-using System;
+﻿using System;
 
 namespace w2.BBS.Manager
 {
@@ -8,11 +6,8 @@ namespace w2.BBS.Manager
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-		}
-
-		protected string Message
-		{
-			get { return "Hello, ASP.NET WebForms!"; }
+			this.Response.Redirect("~/Login.aspx", false);
+			this.Context.ApplicationInstance.CompleteRequest();
 		}
 	}
 }

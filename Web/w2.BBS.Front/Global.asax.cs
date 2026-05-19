@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Web.Routing;
 using w2.Common;
 
@@ -10,6 +11,7 @@ namespace w2.BBS.Front
 		{
 			Constants.APPLICATION_NAME = "w2.BBS.Front";
 			Constants.PHYSICALDIRPATH_LOGFILE = "C:\\Logs\\";
+			Constants.STRING_SQL_CONNECTION = ConfigurationManager.ConnectionStrings["w2mssql"].ConnectionString;
 			RouteConfig.RegisterRoutes(RouteTable.Routes);
 		}
 		

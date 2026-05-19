@@ -1,6 +1,7 @@
 ﻿// (c) 2025 W2 Co.,Ltd.
 
 using System;
+using System.Configuration;
 using w2.Common;
 
 namespace w2.BBS.Manager
@@ -9,8 +10,9 @@ namespace w2.BBS.Manager
 	{
 		protected void Application_Start(object sender, EventArgs e)
 		{
-			Constants.APPLICATION_NAME = "w2.BBS.Front";
+			Constants.APPLICATION_NAME = "w2.BBS.Manager";
 			Constants.PHYSICALDIRPATH_LOGFILE = "C:\\Logs\\";
+			Constants.STRING_SQL_CONNECTION = ConfigurationManager.ConnectionStrings["w2mssql"].ConnectionString;
 		}
 
 		protected void Session_Start(object sender, EventArgs e)

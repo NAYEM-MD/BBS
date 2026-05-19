@@ -3,44 +3,140 @@
   "WorkspaceRootPath": "C:\\inetpub\\wwwroot\\Training.BBS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|c:\\inetpub\\wwwroot\\training.bbs\\web\\w2.bbs.front\\views\\admin.liquid||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|solutionrelative:web\\w2.bbs.front\\views\\admin.liquid||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|c:\\inetpub\\wwwroot\\training.bbs\\web\\w2.bbs.manager\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|c:\\inetpub\\wwwroot\\training.bbs\\web\\w2.bbs.front\\views\\forum.liquid||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|solutionrelative:web\\w2.bbs.front\\views\\forum.liquid||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.front\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|solutionrelative:web\\w2.bbs.front\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.front\\styles\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|solutionrelative:web\\w2.bbs.front\\styles\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.front\\controller\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|solutionrelative:web\\w2.bbs.front\\controller\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.front\\views\\settings.liquid||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|solutionrelative:web\\w2.bbs.front\\views\\settings.liquid||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A778ECBB-A698-2AA5-3DBE-98EA67984F9F}|Commons\\w2.WebFrontDomain\\w2.WebFrontDomain.csproj|c:\\inetpub\\wwwroot\\training.bbs\\commons\\w2.webfrontdomain\\w2.webfrontdomain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A778ECBB-A698-2AA5-3DBE-98EA67984F9F}|Commons\\w2.WebFrontDomain\\w2.WebFrontDomain.csproj|solutionrelative:commons\\w2.webfrontdomain\\w2.webfrontdomain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.front\\views\\forum_detail.liquid||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|solutionrelative:web\\w2.bbs.front\\views\\forum_detail.liquid||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{ED08E15D-72F9-E833-0DDC-5964EEF444E2}|Commons\\w2.SampleDomain\\w2.SampleDomain.csproj|c:\\inetpub\\wwwroot\\training.bbs\\commons\\w2.sampledomain\\w2.sampledomain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{ED08E15D-72F9-E833-0DDC-5964EEF444E2}|Commons\\w2.SampleDomain\\w2.SampleDomain.csproj|solutionrelative:commons\\w2.sampledomain\\w2.sampledomain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.front\\views\\_shared\\layout.liquid||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|solutionrelative:web\\w2.bbs.front\\views\\_shared\\layout.liquid||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{2580C37B-8902-B37C-2EBB-6B8EA0198BAF}|Commons\\w2.ForumDomain\\w2.ForumDomain.csproj|c:\\inetpub\\wwwroot\\training.bbs\\commons\\w2.forumdomain\\w2.forumdomain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2580C37B-8902-B37C-2EBB-6B8EA0198BAF}|Commons\\w2.ForumDomain\\w2.ForumDomain.csproj|solutionrelative:commons\\w2.forumdomain\\w2.forumdomain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.front\\controller\\forumcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|solutionrelative:web\\w2.bbs.front\\controller\\forumcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{91014276-E862-15CA-01E5-FC2C6E380B52}|Commons\\w2.AccountDomain\\w2.AccountDomain.csproj|c:\\inetpub\\wwwroot\\training.bbs\\commons\\w2.accountdomain\\w2.accountdomain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{91014276-E862-15CA-01E5-FC2C6E380B52}|Commons\\w2.AccountDomain\\w2.AccountDomain.csproj|solutionrelative:commons\\w2.accountdomain\\w2.accountdomain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.front\\views\\register.liquid||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|solutionrelative:web\\w2.bbs.front\\views\\register.liquid||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\app_code\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\app_code\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.front\\views\\login.liquid||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|solutionrelative:web\\w2.bbs.front\\views\\login.liquid||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\app_code\\adminsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\app_code\\adminsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\postlist.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\postlist.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\postlist.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\postlist.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\postlist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\postlist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\useredit.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\useredit.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\useredit.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\useredit.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\userdetail.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\userdetail.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\userdetail.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\userdetail.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\useredit.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\useredit.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\userdetail.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\userdetail.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\userlist.aspx||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\userlist.aspx||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\userlist.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\userlist.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\userlist.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\userlist.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\login.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\login.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\form\\common\\default.master.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\form\\common\\default.master.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\form\\common\\default.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\form\\common\\default.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\form\\common\\default.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\form\\common\\default.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\app_code\\adminpagebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\app_code\\adminpagebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.manager\\styles\\manager.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3423E7C2-6DDF-4D19-ABEC-BAA9224E7620}|Web\\w2.BBS.Manager\\w2.BBS.Manager.csproj|solutionrelative:web\\w2.bbs.manager\\styles\\manager.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.front\\viewmodels\\forumreplyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|solutionrelative:web\\w2.bbs.front\\viewmodels\\forumreplyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.front\\views\\register.liquid||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|solutionrelative:web\\w2.bbs.front\\views\\register.liquid||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.front\\viewmodels\\forumpostdetailresponseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,24 +147,12 @@
       "RelativeMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|solutionrelative:web\\w2.bbs.front\\viewmodels\\forumlistresponseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.front\\viewmodels\\forumpostviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|solutionrelative:web\\w2.bbs.front\\viewmodels\\forumpostviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.front\\viewmodels\\forumdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|solutionrelative:web\\w2.bbs.front\\viewmodels\\forumdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.front\\viewmodels\\forumindexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|solutionrelative:web\\w2.bbs.front\\viewmodels\\forumindexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.front\\xml\\db\\sample.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|solutionrelative:web\\w2.bbs.front\\xml\\db\\sample.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.front\\controller\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|solutionrelative:web\\w2.bbs.front\\controller\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.front\\controller\\indexcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -99,20 +183,12 @@
       "RelativeMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|solutionrelative:web\\w2.bbs.front\\viewmodels\\forumactionresponseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.front\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|solutionrelative:web\\w2.bbs.front\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.front\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|solutionrelative:web\\w2.bbs.front\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|C:\\inetpub\\wwwroot\\Training.BBS\\web\\w2.bbs.front\\viewmodels\\authloginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76FFCEEE-BB68-4A15-B456-886126117DB1}|Web\\w2.BBS.Front\\w2.BBS.Front.csproj|solutionrelative:web\\w2.bbs.front\\viewmodels\\authloginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\styles\\settings.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Web\\w2.BBS.Front\\styles\\settings.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -122,117 +198,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "admin.liquid",
-              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Views\\admin.liquid",
-              "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\Views\\admin.liquid",
-              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Views\\admin.liquid",
-              "RelativeToolTip": "Web\\w2.BBS.Front\\Views\\admin.liquid",
+              "DocumentIndex": 4,
+              "Title": "w2.SampleDomain.csproj",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Commons\\w2.SampleDomain\\w2.SampleDomain.csproj",
+              "RelativeDocumentMoniker": "Commons\\w2.SampleDomain\\w2.SampleDomain.csproj",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Commons\\w2.SampleDomain\\w2.SampleDomain.csproj",
+              "RelativeToolTip": "Commons\\w2.SampleDomain\\w2.SampleDomain.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-05-16T00:55:01.351Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-19T07:10:21.429Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "settings.css",
-              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\styles\\settings.css",
-              "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\styles\\settings.css",
-              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\styles\\settings.css",
-              "RelativeToolTip": "Web\\w2.BBS.Front\\styles\\settings.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-05-14T04:51:42.832Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ForumDetailViewModel.cs",
-              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\ViewModels\\ForumDetailViewModel.cs",
-              "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\ViewModels\\ForumDetailViewModel.cs",
-              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\ViewModels\\ForumDetailViewModel.cs",
-              "RelativeToolTip": "Web\\w2.BBS.Front\\ViewModels\\ForumDetailViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T06:28:32.7Z"
+              "DocumentIndex": 5,
+              "Title": "w2.ForumDomain.csproj",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Commons\\w2.ForumDomain\\w2.ForumDomain.csproj",
+              "RelativeDocumentMoniker": "Commons\\w2.ForumDomain\\w2.ForumDomain.csproj",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Commons\\w2.ForumDomain\\w2.ForumDomain.csproj",
+              "RelativeToolTip": "Commons\\w2.ForumDomain\\w2.ForumDomain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-19T07:10:20.341Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ForumController.cs",
-              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Controller\\ForumController.cs",
-              "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\Controller\\ForumController.cs",
-              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Controller\\ForumController.cs",
-              "RelativeToolTip": "Web\\w2.BBS.Front\\Controller\\ForumController.cs",
-              "ViewState": "AgIAAJYBAAAAAAAAAAAkwIkBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T06:30:08.372Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ForumPostViewModel.cs",
-              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\ViewModels\\ForumPostViewModel.cs",
-              "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\ViewModels\\ForumPostViewModel.cs",
-              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\ViewModels\\ForumPostViewModel.cs",
-              "RelativeToolTip": "Web\\w2.BBS.Front\\ViewModels\\ForumPostViewModel.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwA0AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T04:57:52.995Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "forum.liquid",
-              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Views\\forum.liquid",
-              "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\Views\\forum.liquid",
-              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Views\\forum.liquid",
-              "RelativeToolTip": "Web\\w2.BBS.Front\\Views\\forum.liquid",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-29T00:31:43.776Z",
+              "Title": "w2.AccountDomain.csproj",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Commons\\w2.AccountDomain\\w2.AccountDomain.csproj",
+              "RelativeDocumentMoniker": "Commons\\w2.AccountDomain\\w2.AccountDomain.csproj",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Commons\\w2.AccountDomain\\w2.AccountDomain.csproj",
+              "RelativeToolTip": "Commons\\w2.AccountDomain\\w2.AccountDomain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-19T07:10:14.805Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "settings.liquid",
-              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Views\\settings.liquid",
-              "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\Views\\settings.liquid",
-              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Views\\settings.liquid",
-              "RelativeToolTip": "Web\\w2.BBS.Front\\Views\\settings.liquid",
-              "ViewState": "AgIAADoAAAAAAAAAAAAYwFAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-05-07T02:05:55.795Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "style.css",
-              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\styles\\style.css",
-              "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\styles\\style.css",
-              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\styles\\style.css",
-              "RelativeToolTip": "Web\\w2.BBS.Front\\styles\\style.css",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAEcBAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-05-14T04:44:20.179Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "forum_detail.liquid",
-              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Views\\forum_detail.liquid",
-              "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\Views\\forum_detail.liquid",
-              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Views\\forum_detail.liquid",
-              "RelativeToolTip": "Web\\w2.BBS.Front\\Views\\forum_detail.liquid",
-              "ViewState": "AgIAAO4AAAAAAAAAAAAYwPsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-05-13T04:52:09.89Z"
+              "DocumentIndex": 7,
+              "Title": "Constants.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\App_Code\\Constants.cs",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\App_Code\\Constants.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\App_Code\\Constants.cs",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\App_Code\\Constants.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T07:08:14.377Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -242,25 +260,359 @@
               "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\Views\\login.liquid",
               "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Views\\login.liquid",
               "RelativeToolTip": "Web\\w2.BBS.Front\\Views\\login.liquid",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAA4AAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAoAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-05-13T06:41:05.485Z"
+              "WhenOpened": "2026-05-19T07:00:02.679Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "layout.liquid",
-              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Views\\_Shared\\layout.liquid",
-              "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\Views\\_Shared\\layout.liquid",
-              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Views\\_Shared\\layout.liquid",
-              "RelativeToolTip": "Web\\w2.BBS.Front\\Views\\_Shared\\layout.liquid",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-05-14T02:24:43.201Z"
+              "DocumentIndex": 0,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\Web.config",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\Web.config",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\Web.config",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-05-19T06:25:29.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Controller\\AuthController.cs",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\Controller\\AuthController.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Controller\\AuthController.cs",
+              "RelativeToolTip": "Web\\w2.BBS.Front\\Controller\\AuthController.cs",
+              "ViewState": "AgIAAAABAAAAAAAAAAAywAEBAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T04:37:09.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Web.config",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\Web.config",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Web.config",
+              "RelativeToolTip": "Web\\w2.BBS.Front\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-04-29T02:52:04.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "w2.WebFrontDomain.csproj",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Commons\\w2.WebFrontDomain\\w2.WebFrontDomain.csproj",
+              "RelativeDocumentMoniker": "Commons\\w2.WebFrontDomain\\w2.WebFrontDomain.csproj",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Commons\\w2.WebFrontDomain\\w2.WebFrontDomain.csproj",
+              "RelativeToolTip": "Commons\\w2.WebFrontDomain\\w2.WebFrontDomain.csproj",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAswAgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-19T07:10:22.722Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "Global.asax.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\Global.asax.cs",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\Global.asax.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\Global.asax.cs",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\Global.asax.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T06:12:07.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PostList.aspx.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\PostList.aspx.cs",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\PostList.aspx.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\PostList.aspx.cs",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\PostList.aspx.cs",
+              "ViewState": "AgIAAPIAAAAAAAAAAAAqwA0BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T02:45:27.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PostList.aspx",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\PostList.aspx",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\PostList.aspx",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\PostList.aspx",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\PostList.aspx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-05-19T02:44:42.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UserEdit.aspx.designer.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\UserEdit.aspx.designer.cs",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\UserEdit.aspx.designer.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\UserEdit.aspx.designer.cs",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\UserEdit.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T02:43:38.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UserEdit.aspx.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\UserEdit.aspx.cs",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\UserEdit.aspx.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\UserEdit.aspx.cs",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\UserEdit.aspx.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAqwIsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T02:43:03.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AdminSession.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\App_Code\\AdminSession.cs",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\App_Code\\AdminSession.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\App_Code\\AdminSession.cs",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\App_Code\\AdminSession.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T02:25:34.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PostList.aspx.designer.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\PostList.aspx.designer.cs",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\PostList.aspx.designer.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\PostList.aspx.designer.cs",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\PostList.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T02:46:29.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Default.aspx.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\Default.aspx.cs",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\Default.aspx.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\Default.aspx.cs",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\Default.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAUwAcAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T02:48:01.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UserEdit.aspx",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\UserEdit.aspx",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\UserEdit.aspx",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\UserEdit.aspx",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\UserEdit.aspx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-05-19T02:42:14.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Default.aspx",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\Default.aspx",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\Default.aspx",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\Default.aspx",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\Default.aspx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-05-19T02:47:12.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UserDetail.aspx.designer.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\UserDetail.aspx.designer.cs",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\UserDetail.aspx.designer.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\UserDetail.aspx.designer.cs",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\UserDetail.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T02:41:36.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UserDetail.aspx.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\UserDetail.aspx.cs",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\UserDetail.aspx.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\UserDetail.aspx.cs",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\UserDetail.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T02:40:41.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UserDetail.aspx",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\UserDetail.aspx",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\UserDetail.aspx",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\UserDetail.aspx",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\UserDetail.aspx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-05-19T02:40:01.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "UserList.aspx.designer.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\UserList.aspx.designer.cs",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\UserList.aspx.designer.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\UserList.aspx.designer.cs",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\UserList.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T02:39:21.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UserList.aspx.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\UserList.aspx.cs",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\UserList.aspx.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\UserList.aspx.cs",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\UserList.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T02:37:51.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UserList.aspx",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\UserList.aspx",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\UserList.aspx",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\UserList.aspx",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\UserList.aspx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-05-19T02:36:47.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Login.aspx.designer.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\Login.aspx.designer.cs",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\Login.aspx.designer.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\Login.aspx.designer.cs",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\Login.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T02:36:09.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Login.aspx",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\Login.aspx",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\Login.aspx",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\Login.aspx",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\Login.aspx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-05-19T02:34:17.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Default.master.designer.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\Form\\Common\\Default.master.designer.cs",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\Form\\Common\\Default.master.designer.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\Form\\Common\\Default.master.designer.cs",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\Form\\Common\\Default.master.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T02:32:12.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Default.master.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\Form\\Common\\Default.master.cs",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\Form\\Common\\Default.master.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\Form\\Common\\Default.master.cs",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\Form\\Common\\Default.master.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T02:31:39.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Default.master",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\Form\\Common\\Default.master",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\Form\\Common\\Default.master",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\Form\\Common\\Default.master",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\Form\\Common\\Default.master",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-05-19T02:29:51.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "AdminPageBase.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\App_Code\\AdminPageBase.cs",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\App_Code\\AdminPageBase.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\App_Code\\AdminPageBase.cs",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\App_Code\\AdminPageBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T02:29:21.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "manager.css",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\styles\\manager.css",
+              "RelativeDocumentMoniker": "Web\\w2.BBS.Manager\\styles\\manager.css",
+              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Manager\\styles\\manager.css",
+              "RelativeToolTip": "Web\\w2.BBS.Manager\\styles\\manager.css",
+              "ViewState": "AgIAACYAAAAAAAAAAAAuwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-05-19T02:24:40.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
               "Title": "ForumReplyViewModel.cs",
               "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\ViewModels\\ForumReplyViewModel.cs",
               "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\ViewModels\\ForumReplyViewModel.cs",
@@ -268,11 +620,12 @@
               "RelativeToolTip": "Web\\w2.BBS.Front\\ViewModels\\ForumReplyViewModel.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAowBoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T01:09:36.697Z"
+              "WhenOpened": "2026-05-07T01:09:36.697Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 33,
               "Title": "register.liquid",
               "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Views\\register.liquid",
               "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\Views\\register.liquid",
@@ -280,11 +633,12 @@
               "RelativeToolTip": "Web\\w2.BBS.Front\\Views\\register.liquid",
               "ViewState": "AgIAACYAAAAAAAAAAAAiwC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-05-13T06:46:23.522Z"
+              "WhenOpened": "2026-05-13T06:46:23.522Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 34,
               "Title": "ForumPostDetailResponseViewModel.cs",
               "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\ViewModels\\ForumPostDetailResponseViewModel.cs",
               "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\ViewModels\\ForumPostDetailResponseViewModel.cs",
@@ -292,11 +646,12 @@
               "RelativeToolTip": "Web\\w2.BBS.Front\\ViewModels\\ForumPostDetailResponseViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAiwBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T06:29:38.238Z"
+              "WhenOpened": "2026-05-13T06:29:38.238Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 37,
               "Title": "Sample.xml",
               "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Xml\\Db\\Sample.xml",
               "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\Xml\\Db\\Sample.xml",
@@ -304,23 +659,12 @@
               "RelativeToolTip": "Web\\w2.BBS.Front\\Xml\\Db\\Sample.xml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2026-04-20T06:15:55.928Z"
+              "WhenOpened": "2026-04-20T06:15:55.928Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Controller\\AuthController.cs",
-              "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\Controller\\AuthController.cs",
-              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Controller\\AuthController.cs",
-              "RelativeToolTip": "Web\\w2.BBS.Front\\Controller\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-29T04:37:09.045Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 35,
               "Title": "ForumListResponseViewModel.cs",
               "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\ViewModels\\ForumListResponseViewModel.cs",
               "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\ViewModels\\ForumListResponseViewModel.cs",
@@ -328,11 +672,12 @@
               "RelativeToolTip": "Web\\w2.BBS.Front\\ViewModels\\ForumListResponseViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T07:15:38.874Z"
+              "WhenOpened": "2026-04-20T07:15:38.874Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 40,
               "Title": "BaseController.cs",
               "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Controller\\Shared\\BaseController.cs",
               "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\Controller\\Shared\\BaseController.cs",
@@ -340,11 +685,12 @@
               "RelativeToolTip": "Web\\w2.BBS.Front\\Controller\\Shared\\BaseController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T11:32:26.015Z"
+              "WhenOpened": "2026-04-18T11:32:26.015Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 36,
               "Title": "ForumIndexViewModel.cs",
               "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\ViewModels\\ForumIndexViewModel.cs",
               "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\ViewModels\\ForumIndexViewModel.cs",
@@ -352,11 +698,12 @@
               "RelativeToolTip": "Web\\w2.BBS.Front\\ViewModels\\ForumIndexViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T06:29:32.653Z"
+              "WhenOpened": "2026-04-20T06:29:32.653Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 38,
               "Title": "IndexController.cs",
               "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Controller\\IndexController.cs",
               "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\Controller\\IndexController.cs",
@@ -364,11 +711,12 @@
               "RelativeToolTip": "Web\\w2.BBS.Front\\Controller\\IndexController.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAABUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T02:52:45.78Z"
+              "WhenOpened": "2026-05-07T02:52:45.78Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 42,
               "Title": "AccountSettingsViewModel.cs",
               "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\ViewModels\\AccountSettingsViewModel.cs",
               "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\ViewModels\\AccountSettingsViewModel.cs",
@@ -376,11 +724,12 @@
               "RelativeToolTip": "Web\\w2.BBS.Front\\ViewModels\\AccountSettingsViewModel.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAwwCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T02:04:07.666Z"
+              "WhenOpened": "2026-05-07T02:04:07.666Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 41,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Controller\\AccountController.cs",
               "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\Controller\\AccountController.cs",
@@ -388,11 +737,12 @@
               "RelativeToolTip": "Web\\w2.BBS.Front\\Controller\\AccountController.cs",
               "ViewState": "AgIAAHMBAAAAAAAAAADwv30BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T02:03:09.117Z"
+              "WhenOpened": "2026-05-07T02:03:09.117Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 39,
               "Title": "index.liquid",
               "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Views\\index.liquid",
               "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\Views\\index.liquid",
@@ -400,11 +750,12 @@
               "RelativeToolTip": "Web\\w2.BBS.Front\\Views\\index.liquid",
               "ViewState": "AgIAACQAAAAAAAAAAAAIwEUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-05-07T02:51:16.515Z"
+              "WhenOpened": "2026-05-07T02:51:16.515Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 44,
               "Title": "ForumActionResponseViewModel.cs",
               "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\ViewModels\\ForumActionResponseViewModel.cs",
               "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\ViewModels\\ForumActionResponseViewModel.cs",
@@ -412,11 +763,12 @@
               "RelativeToolTip": "Web\\w2.BBS.Front\\ViewModels\\ForumActionResponseViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T07:16:54.131Z"
+              "WhenOpened": "2026-04-20T07:16:54.131Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 43,
               "Title": "BaseViewModel.cs",
               "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\ViewModels\\BaseViewModel.cs",
               "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\ViewModels\\BaseViewModel.cs",
@@ -424,24 +776,12 @@
               "RelativeToolTip": "Web\\w2.BBS.Front\\ViewModels\\BaseViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T05:25:43.196Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Web.config",
-              "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Web.config",
-              "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\Web.config",
-              "ToolTip": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Web.config",
-              "RelativeToolTip": "Web\\w2.BBS.Front\\Web.config",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-04-29T02:52:04.429Z",
+              "WhenOpened": "2026-04-28T05:25:43.196Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 46,
               "Title": "AuthLoginViewModel.cs",
               "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\ViewModels\\AuthLoginViewModel.cs",
               "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\ViewModels\\AuthLoginViewModel.cs",
@@ -449,11 +789,12 @@
               "RelativeToolTip": "Web\\w2.BBS.Front\\ViewModels\\AuthLoginViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T11:04:51.996Z"
+              "WhenOpened": "2026-04-18T11:04:51.996Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 45,
               "Title": "web.config",
               "DocumentMoniker": "C:\\inetpub\\wwwroot\\Training.BBS\\Web\\w2.BBS.Front\\Views\\web.config",
               "RelativeDocumentMoniker": "Web\\w2.BBS.Front\\Views\\web.config",
@@ -461,7 +802,8 @@
               "RelativeToolTip": "Web\\w2.BBS.Front\\Views\\web.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-04-18T19:41:14.223Z"
+              "WhenOpened": "2026-04-18T19:41:14.223Z",
+              "EditorCaption": ""
             }
           ]
         }

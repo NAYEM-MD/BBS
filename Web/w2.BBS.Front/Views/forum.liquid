@@ -12,8 +12,8 @@
   <p class="text-muted">ログインしました。</p>
   <p class="text-strong">ユーザー名: {{ LoginUserName }}</p>
   <div class="forum-toolbar">
-    <a class="btn btn--outline btn--sm" href="/Training.BBS/Web/w2.BBS.Front/account/settings">設定</a>
-    <form class="forum-toolbar__logout" method="post" action="/Training.BBS/Web/w2.BBS.Front/auth/logout">
+    <a class="btn btn--outline btn--sm" href="{{ RootUrl | append: '/account/settings' }}">設定</a>
+    <form class="forum-toolbar__logout" method="post" action="{{ RootUrl | append: '/auth/logout' }}">
       <button type="submit" class="btn btn--success btn--sm">ログアウト</button>
     </form>
   </div>
@@ -50,12 +50,12 @@
 
     <h2 class="section-title">投稿一覧</h2>
 
-    <p v-if="hasPosts === false" class="text-empty">投稿はまだありません。</p>
+    <p v-if="hasPosts === false && errorMessage === ''" class="text-empty">投稿はまだありません。</p>
 
     <div v-if="hasPosts" class="post-list">
       <article v-for="post in posts" :key="post.PostId" class="post-card">
         <h3 class="post-card__title">
-          <a :href="'/Training.BBS/Web/w2.BBS.Front/forum/' + post.PostId">${ post.Title }</a>
+          <a :href="apiRoot + '/forum/' + post.PostId">${ post.Title }</a>
         </h3>
         <p class="post-card__body">${ post.Body }</p>
         <small class="post-card__meta">投稿者: ${ post.UserName }</small>
@@ -88,6 +88,9 @@
       };
     },
     computed: {
+      apiRoot() {
+        return window.apiRoot || '';
+      },
       hasPosts() {
         return this.posts.length > 0;
       },
@@ -106,9 +109,9 @@
     },
     methods: {
       loadPosts(page) {
-        const url = `/Training.BBS/Web/w2.BBS.Front/api/forum/posts?page=${page}`;
+        const url = `${window.apiRoot}/api/forum/posts?page=${page}`;
 
-        return fetch(url)
+        return fetch(url, { credentials: 'same-origin' })
           .then((response) => {
             if (response.ok === false) {
               throw new Error(`HTTP ${response.status}`);
@@ -122,7 +125,7 @@
               return;
             }
 
-            this.posts = result.Posts;
+            this.posts = result.Posts || [];
             this.page = result.Page;
             this.pageCount = result.PageCount;
             this.totalCount = result.TotalCount;
@@ -142,8 +145,9 @@
 
         this.isSaving = true;
 
-        fetch('/Training.BBS/Web/w2.BBS.Front/api/forum/create', {
+        fetch(`${window.apiRoot}/api/forum/create`, {
           method: 'POST',
+          credentials: 'same-origin',
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
           },

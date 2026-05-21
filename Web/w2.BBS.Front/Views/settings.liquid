@@ -1,4 +1,4 @@
-﻿{% _layout 'layout.liquid' %}
+{% _layout 'layout.liquid' %}
 
 {% _area title %}アカウント設定{% end_area %}
 
@@ -10,7 +10,7 @@
 <div class="page-wrap settings-page">
   <h1 class="page-title">アカウント設定</h1>
 
-  <p class="settings-back"><a href="/Training.BBS/Web/w2.BBS.Front/forum">掲示板へ戻る</a></p>
+  <p class="settings-back"><a href="{{ RootUrl | append: '/forum' }}">掲示板へ戻る</a></p>
 
   {% if SuccessMessage != blank %}
   <p class="settings-msg">{{ SuccessMessage }}</p>
@@ -23,7 +23,7 @@
   <h2 class="settings-card-head">プロフィール・パスワード</h2>
   <p class="settings-card-sub">ログインID（変更できません）: {{ LoginId }}</p>
 
-  <form class="settings-form" method="post" action="/Training.BBS/Web/w2.BBS.Front/account/update">
+  <form class="settings-form" method="post" action="{{ RootUrl | append: '/account/update' }}">
     <div class="field">
       <label class="field__label" for="userName">ユーザー名</label>
       <input class="input" type="text" id="userName" name="UserName" value="{{ UserName }}" />
@@ -50,7 +50,7 @@
   <h2 class="settings-danger-head">アカウント削除</h2>
   <p class="settings-danger-sub">パスワードを入力して退会します。投稿・返信は表示されなくなります。</p>
 
-  <form class="settings-danger-form" method="post" action="/Training.BBS/Web/w2.BBS.Front/account/delete" id="form-delete-account">
+  <form class="settings-danger-form" method="post" action="{{ RootUrl | append: '/account/delete' }}" id="form-delete-account">
     <div class="field">
       <label class="field__label" for="deletePassword">パスワード</label>
       <input class="input" type="password" id="deletePassword" name="DeletePassword" value="" autocomplete="current-password" />

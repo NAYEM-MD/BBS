@@ -1,4 +1,4 @@
-// (c) 2025 W2 Co.,Ltd.
+// (c) 2026 W2 Co.,Ltd.
 
 using System.Configuration;
 using System.Web;
@@ -6,6 +6,9 @@ using w2.Common;
 
 namespace w2.BBS.Front
 {
+	/// <summary>
+	/// SQL接続文字列をリクエスト開始時に設定する HTTP モジュール
+	/// </summary>
 	public class SqlConnectionModule : IHttpModule
 	{
 		private static bool s_initialized;

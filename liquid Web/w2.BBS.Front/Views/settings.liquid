@@ -1,0 +1,80 @@
+﻿{% _layout 'layout.liquid' %}
+
+{% _area title %}アカウント設定{% end_area %}
+
+{% _area head_resource %}
+<link rel="stylesheet" href="{{ RootUrl | append: '/styles/style.css' | hard_reload }}" />
+{% end_area %}
+
+{% _area page_body %}
+<div class="page-wrap settings-page">
+  <h1 class="page-title">アカウント設定</h1>
+
+  <p class="settings-back"><a href="{{ RootUrl | append: '/forum' }}">掲示板へ戻る</a></p>
+
+  {% if SuccessMessage != blank %}
+  <p class="settings-msg">{{ SuccessMessage }}</p>
+  {% endif %}
+
+  {% if ErrorMessage != blank %}
+  <p class="settings-msg">{{ ErrorMessage }}</p>
+  {% endif %}
+
+  <h2 class="settings-card-head">プロフィール・パスワード</h2>
+  <p class="settings-card-sub">ログインID（変更できません）: {{ LoginId }}</p>
+
+  <form class="settings-form" method="post" action="{{ RootUrl | append: '/account/update' }}">
+    <div class="field">
+      <label class="field__label" for="userName">ユーザー名</label>
+      <input class="input" type="text" id="userName" name="UserName" value="{{ UserName }}" />
+    </div>
+    <div class="field">
+      <label class="field__label" for="currentPassword">現在のパスワード（必須）</label>
+      <input class="input" type="password" id="currentPassword" name="CurrentPassword" value="" autocomplete="current-password" />
+    </div>
+    <div class="field">
+      <label class="field__label" for="newPassword">新しいパスワード（変更しない場合は空）</label>
+      <input class="input" type="password" id="newPassword" name="NewPassword" value="" autocomplete="new-password" />
+    </div>
+    <div class="field">
+      <label class="field__label" for="newPasswordConfirm">新しいパスワード（確認）</label>
+      <input class="input" type="password" id="newPasswordConfirm" name="NewPasswordConfirm" value="" autocomplete="new-password" />
+    </div>
+    <div class="field">
+      <button class="btn btn--outline-dark" type="submit">保存する</button>
+    </div>
+  </form>
+
+  <hr class="rule" />
+
+  <h2 class="settings-danger-head">アカウント削除</h2>
+  <p class="settings-danger-sub">パスワードを入力して退会します。投稿・返信は表示されなくなります。</p>
+
+  <form class="settings-danger-form" method="post" action="{{ RootUrl | append: '/account/delete' }}" id="form-delete-account">
+    <div class="field">
+      <label class="field__label" for="deletePassword">パスワード</label>
+      <input class="input" type="password" id="deletePassword" name="DeletePassword" value="" autocomplete="current-password" />
+    </div>
+    <div class="field">
+      <button class="btn btn--danger" type="submit">アカウントを削除する</button>
+    </div>
+  </form>
+
+  <script>
+    (function () {
+      const form = document.getElementById('form-delete-account');
+      if (!form) {
+        return;
+      }
+      form.addEventListener('submit', function (e) {
+        if (window.confirm('アカウントを削除しますか？この操作は取り消せません。') === false) {
+          e.preventDefault();
+        }
+      });
+    })();
+  </script>
+</div>
+{% end_area %}
+
+{% _area component %}
+{% end_area %}

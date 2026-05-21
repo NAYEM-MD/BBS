@@ -1,4 +1,6 @@
-﻿using System;
+﻿// (c) 2026 W2 Co.,Ltd.
+
+using System;
 
 namespace w2.BBS.Front.ViewModels
 {

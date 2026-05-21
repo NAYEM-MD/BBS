@@ -26,6 +26,7 @@ body {
   color: var(--text);
   font-family: system-ui, "Segoe UI", Meiryo, sans-serif;
   line-height: 1.5;
+  min-height: 100vh;
 }
 
 a {

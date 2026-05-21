@@ -1,22 +1,26 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Form/Common/Default.master" AutoEventWireup="true" CodeBehind="UserEdit.aspx.cs" Inherits="w2.BBS.Manager.UserEdit" %>
+<%-- // (c) 2026 W2 Co.,Ltd. --%>
 
 <asp:Content ID="cHead" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 
 <asp:Content ID="cBody" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-	<asp:Literal ID="litTitle" runat="server" />
-	<asp:Literal ID="litMsg" runat="server" />
+	<h1>ユーザー編集</h1>
+
+	<asp:Panel ID="pnlMsg" runat="server" Visible="false">
+		<p><asp:Literal ID="lMsg" runat="server" /></p>
+	</asp:Panel>
 
 	<div class="field">
-		<asp:Literal ID="litLblLoginId" runat="server" />
-		<asp:Literal ID="litLoginId" runat="server" />
+		<span class="label">ログインID</span>
+		<asp:Literal ID="lLoginId" runat="server" />
 	</div>
 	<div class="field">
-		<asp:Literal ID="litLblUserName" runat="server" />
+		<span class="label">ユーザー名</span>
 		<asp:TextBox ID="tbUserName" runat="server" />
 	</div>
 	<div class="field">
-		<asp:Literal ID="litLblPassword" runat="server" />
+		<span class="label">新パスワード</span>（空なら変更しない）
 		<asp:TextBox ID="tbPassword" runat="server" TextMode="Password" />
 	</div>
 

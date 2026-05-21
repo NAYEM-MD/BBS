@@ -1,3 +1,5 @@
+// (c) 2026 W2 Co.,Ltd.
+
 using System;
 
 using Unity;
@@ -6,7 +8,7 @@ using w2.FoundationDomain.DependencyInjections;
 namespace w2.BBS.Front
 {
 	/// <summary>
-	/// Specifies the Unity configuration for the main container.
+	/// Unity DI 設定
 	/// </summary>
 	public static class UnityConfig
 	{
@@ -18,21 +20,13 @@ namespace w2.BBS.Front
 				return container;
 			});
 
-		/// <summary>
-		/// Configured Unity Container.
-		/// </summary>
+		/// <summary>設定済み Unity コンテナ</summary>
 		public static IUnityContainer Container => s_container.Value;
 
 		/// <summary>
-		/// Registers the type mappings with the Unity container.
+		/// Unity コンテナへ型マッピングを登録
 		/// </summary>
-		/// <param name="container">The unity container to configure.</param>
-		/// <remarks>
-		/// There is no need to register concrete types such as controllers or
-		/// API controllers (unless you want to change the defaults), as Unity
-		/// allows resolving a concrete type even if it was not previously
-		/// registered.
-		/// </remarks>
+		/// <param name="container">Unity コンテナ</param>
 		public static void RegisterTypes(UnityContainer container)
 		{
 			new DiContainerConfiguratorEntryPoint().Configure(container);

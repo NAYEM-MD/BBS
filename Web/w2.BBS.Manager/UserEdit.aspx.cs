@@ -1,123 +1,241 @@
-﻿// (c) 2025 W2 Co.,Ltd.
+﻿// (c) 2026 W2 Co.,Ltd.
 
 using System;
 using System.Data.SqlClient;
-using System.Web.UI;
 using w2.Common;
 
 namespace w2.BBS.Manager
 {
+	/// <summary>
+	/// ユーザー編集
+	/// </summary>
 	public partial class UserEdit : AdminPageBase
 	{
+		private const string PATH_USER_LIST = "~/UserList.aspx";
+		
+		private const string CSS_CLASS_ERROR = "error";
+		private const string CSS_CLASS_OK = "ok";
+
+		private const string MESSAGE_NOT_FOUND = "ユーザーが見つかりません。";
+		private const string MESSAGE_USER_NAME_REQUIRED = "ユーザー名を入力してください。";
+		private const string MESSAGE_SAVED = "保存しました。";
+
+		private const string SQL_SELECT_USER =
+			@"SELECT login_id, user_name
+			FROM w2_User
+			WHERE user_id = @user_id
+			AND del_flg = 0";
+
+		private const string SQL_UPDATE_USER_NAME =
+			@"UPDATE w2_User
+			SET user_name = @user_name
+			WHERE user_id = @user_id
+			AND del_flg = 0";
+
+		private const string SQL_UPDATE_PASSWORD =
+			@"UPDATE w2_User
+			SET password = @password
+			WHERE user_id = @user_id
+			AND del_flg = 0";
+
+		/// <summary>
+		/// ページロード
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			if (int.TryParse(this.Request.QueryString["id"], out var userId) == false || userId < 1)
+			if (int.TryParse(this.Request.QueryString["id"], out var userId) is false || userId < 1)
 			{
-				this.Response.Redirect("~/UserList.aspx", false);
+				this.Response.Redirect(PATH_USER_LIST, false);
 				return;
 			}
 
-			this.ViewState["uid"] = userId;
+			this.ViewState[ManagerPageConstants.VIEWSTATE_KEY_USER_ID] = userId;
 
 			if (this.IsPostBack)
 			{
 				return;
 			}
 
-			this.litTitle.Text = @"<h1>ユーザー編集</h1>";
-			this.litLblLoginId.Text = @"<span class=""label"">ログインID</span>";
-			this.litLblUserName.Text = @"<span class=""label"">ユーザー名</span>";
-			this.litLblPassword.Text = @"<span class=""label"">新パスワード</span>（空なら変更しない）";
+			this.LoadUser(userId);
+		}
 
+		/// <summary>
+		/// 保存ボタン クリック
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		protected void lbSave_OnClick(object sender, EventArgs e)
+		{
+			this.HideMessage();
+
+			var userId = Convert.ToInt32(this.ViewState[ManagerPageConstants.VIEWSTATE_KEY_USER_ID]);
+			var name = (this.tbUserName.Text ?? string.Empty).Trim();
+			if (string.IsNullOrEmpty(name))
+			{
+				this.ShowMessage(MESSAGE_USER_NAME_REQUIRED, CSS_CLASS_ERROR);
+				return;
+			}
+
+			this.UpdateUserName(userId, name);
+
+			var pw = (this.tbPassword.Text ?? string.Empty).Trim();
+			if (string.IsNullOrEmpty(pw) is false)
+			{
+				this.UpdatePassword(userId, pw);
+			}
+
+			this.ShowMessage(MESSAGE_SAVED, CSS_CLASS_OK);
+		}
+
+		/// <summary>
+		/// ユーザー削除ボタン クリック
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		protected void lbDeleteUser_OnClick(object sender, EventArgs e)
+		{
+			var userId = Convert.ToInt32(this.ViewState[ManagerPageConstants.VIEWSTATE_KEY_USER_ID]);
+			this.SoftDeleteUserContent(userId);
+
+			this.Response.Redirect(PATH_USER_LIST, false);
+		}
+
+		/// <summary>
+		/// 戻るボタン クリック
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		protected void lbBack_OnClick(object sender, EventArgs e)
+		{
+			this.Response.Redirect(PATH_USER_LIST, false);
+		}
+
+		/// <summary>
+		/// メッセージ表示
+		/// </summary>
+		/// <param name="message">メッセージ</param>
+		/// <param name="cssClass">CSSクラス</param>
+		private void ShowMessage(string message, string cssClass)
+		{
+			this.lMsg.Text = System.Web.HttpUtility.HtmlEncode(message);
+			this.pnlMsg.CssClass = cssClass;
+			this.pnlMsg.Visible = true;
+		}
+
+		/// <summary>
+		/// メッセージ非表示
+		/// </summary>
+		private void HideMessage()
+		{
+			this.lMsg.Text = string.Empty;
+			this.pnlMsg.Visible = false;
+		}
+
+		/// <summary>
+		/// ユーザー情報読み込み
+		/// </summary>
+		/// <param name="userId">ユーザーID</param>
+		private void LoadUser(int userId)
+		{
 			using (var connection = new SqlConnection(Constants.STRING_SQL_CONNECTION))
 			{
 				connection.Open();
-				using (var command = new SqlCommand(
-@"SELECT login_id, user_name FROM w2_User WHERE user_id = @user_id AND del_flg = 0", connection))
+
+				using (var command = new SqlCommand(SQL_SELECT_USER, connection))
 				{
 					command.Parameters.AddWithValue("@user_id", userId);
+
 					using (var reader = command.ExecuteReader())
 					{
-						if (reader.Read() == false)
+						if (reader.Read() is false)
 						{
-							this.litMsg.Text = @"<p class=""error"">ユーザーが見つかりません。</p>";
+							this.ShowMessage(MESSAGE_NOT_FOUND, CSS_CLASS_ERROR);
 							return;
 						}
 
-						this.litLoginId.Text = System.Web.HttpUtility.HtmlEncode(Convert.ToString(reader["login_id"]));
+						this.lLoginId.Text = System.Web.HttpUtility.HtmlEncode(Convert.ToString(reader["login_id"]));
 						this.tbUserName.Text = Convert.ToString(reader["user_name"]);
 					}
 				}
 			}
 		}
 
-		protected void lbSave_OnClick(object sender, EventArgs e)
+		/// <summary>
+		/// ユーザー名更新
+		/// </summary>
+		/// <param name="userId">ユーザーID</param>
+		/// <param name="userName">ユーザー名</param>
+		/// <returns>更新件数</returns>
+		private int UpdateUserName(int userId, string userName)
 		{
-			this.litMsg.Text = string.Empty;
-			var userId = Convert.ToInt32(this.ViewState["uid"]);
-			var name = (this.tbUserName.Text ?? string.Empty).Trim();
-			if (string.IsNullOrEmpty(name))
-			{
-				this.litMsg.Text = @"<p class=""error"">ユーザー名を入力してください。</p>";
-				return;
-			}
-
 			using (var connection = new SqlConnection(Constants.STRING_SQL_CONNECTION))
 			{
 				connection.Open();
-				using (var command = new SqlCommand(
-@"UPDATE w2_User SET user_name = @user_name WHERE user_id = @user_id AND del_flg = 0", connection))
-				{
-					command.Parameters.AddWithValue("@user_name", name);
-					command.Parameters.AddWithValue("@user_id", userId);
-					command.ExecuteNonQuery();
-				}
 
-				var pw = (this.tbPassword.Text ?? string.Empty).Trim();
-				if (string.IsNullOrEmpty(pw) == false)
+				using (var command = new SqlCommand(SQL_UPDATE_USER_NAME, connection))
 				{
-					using (var command = new SqlCommand(
-@"UPDATE w2_User SET password = @password WHERE user_id = @user_id AND del_flg = 0", connection))
-					{
-						command.Parameters.AddWithValue("@password", pw);
-						command.Parameters.AddWithValue("@user_id", userId);
-						command.ExecuteNonQuery();
-					}
+					command.Parameters.AddWithValue("@user_name", userName);
+					command.Parameters.AddWithValue("@user_id", userId);
+					return command.ExecuteNonQuery();
 				}
 			}
-
-			this.litMsg.Text = @"<p class=""ok"">保存しました。</p>";
 		}
 
-		protected void lbDeleteUser_OnClick(object sender, EventArgs e)
+		/// <summary>
+		/// パスワード更新
+		/// </summary>
+		/// <param name="userId">ユーザーID</param>
+		/// <param name="password">パスワード</param>
+		/// <returns>更新件数</returns>
+		private int UpdatePassword(int userId, string password)
 		{
-			var userId = Convert.ToInt32(this.ViewState["uid"]);
-
 			using (var connection = new SqlConnection(Constants.STRING_SQL_CONNECTION))
 			{
 				connection.Open();
+
+				using (var command = new SqlCommand(SQL_UPDATE_PASSWORD, connection))
+				{
+					command.Parameters.AddWithValue("@password", password);
+					command.Parameters.AddWithValue("@user_id", userId);
+					return command.ExecuteNonQuery();
+				}
+			}
+		}
+
+		/// <summary>
+		/// ユーザーと紐づく投稿・返信の論理削除
+		/// </summary>
+		/// <param name="userId">ユーザーID</param>
+		private void SoftDeleteUserContent(int userId)
+		{
+			using (var connection = new SqlConnection(Constants.STRING_SQL_CONNECTION))
+			{
+				connection.Open();
+
 				using (var tx = connection.BeginTransaction())
 				{
 					try
 					{
-						using (var c1 = new SqlCommand(
-@"UPDATE w2_ForumPost SET del_flg = 1 WHERE user_id = @user_id AND del_flg = 0", connection, tx))
+						using (var command = new SqlCommand(BbsSql.SOFT_DELETE_USER_POSTS, connection, tx))
 						{
-							c1.Parameters.AddWithValue("@user_id", userId);
-							c1.ExecuteNonQuery();
+							command.Parameters.AddWithValue("@user_id", userId);
+							command.ExecuteNonQuery();
 						}
-						using (var c2 = new SqlCommand(
-@"UPDATE w2_ForumReply SET del_flg = 1 WHERE user_id = @user_id AND del_flg = 0", connection, tx))
+
+						using (var command = new SqlCommand(BbsSql.SOFT_DELETE_USER_REPLIES, connection, tx))
 						{
-							c2.Parameters.AddWithValue("@user_id", userId);
-							c2.ExecuteNonQuery();
+							command.Parameters.AddWithValue("@user_id", userId);
+							command.ExecuteNonQuery();
 						}
-						using (var c3 = new SqlCommand(
-@"UPDATE w2_User SET del_flg = 1 WHERE user_id = @user_id AND del_flg = 0", connection, tx))
+
+						using (var command = new SqlCommand(BbsSql.SOFT_DELETE_USER, connection, tx))
 						{
-							c3.Parameters.AddWithValue("@user_id", userId);
-							c3.ExecuteNonQuery();
+							command.Parameters.AddWithValue("@user_id", userId);
+							command.ExecuteNonQuery();
 						}
+
 						tx.Commit();
 					}
 					catch
@@ -127,13 +245,7 @@ namespace w2.BBS.Manager
 					}
 				}
 			}
-
-			this.Response.Redirect("~/UserList.aspx", false);
-		}
-
-		protected void lbBack_OnClick(object sender, EventArgs e)
-		{
-			this.Response.Redirect("~/UserList.aspx", false);
 		}
 	}
 }
+

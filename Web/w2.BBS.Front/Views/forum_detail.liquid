@@ -1,4 +1,4 @@
-﻿{% _layout 'layout.liquid' %}
+{% _layout 'layout.liquid' %}
 
 {% _area title %}掲示板 — 投稿詳細{% end_area %}
 
@@ -8,7 +8,7 @@
 
 {% _area page_body %}
 <div class="page-wrap">
-  <p><a href="/Training.BBS/Web/w2.BBS.Front/forum">← 一覧へ</a></p>
+  <p><a href="{{ RootUrl | append: '/forum' }}">← 一覧へ</a></p>
   <p class="text-muted">ユーザー名: {{ LoginUserName }}</p>
   <hr class="rule" />
   <vue-forum-detail></vue-forum-detail>
@@ -93,7 +93,7 @@
       loadPost() {
         this.errorMessage = '';
         this.isLoading = true;
-        const url = `/Training.BBS/Web/w2.BBS.Front/api/forum/post?postId=${this.postId}`;
+        const url = `${window.apiRoot}/api/forum/post?postId=${this.postId}`;
         return fetch(url)
           .then((response) => {
             if (response.ok === false) {
@@ -138,7 +138,7 @@
         params.append('title', this.editTitle);
         params.append('body', this.editBody);
         this.isUpdating = true;
-        fetch('/Training.BBS/Web/w2.BBS.Front/api/forum/update', {
+        fetch(`${window.apiRoot}/api/forum/update`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
@@ -176,7 +176,7 @@
         const params = new URLSearchParams();
         params.append('postId', postId);
         this.isDeleting = true;
-        fetch('/Training.BBS/Web/w2.BBS.Front/api/forum/delete', {
+        fetch(`${window.apiRoot}/api/forum/delete`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
@@ -194,7 +194,7 @@
               this.errorMessage = result.Message;
               return;
             }
-            window.location.href = '/Training.BBS/Web/w2.BBS.Front/forum';
+            window.location.href = window.apiRoot + '/forum';
           })
           .catch(() => {
             this.errorMessage = '投稿の削除に失敗しました。';
@@ -215,7 +215,7 @@
         params.append('postId', this.postId);
         params.append('body', body);
         this.replySaving = true;
-        fetch('/Training.BBS/Web/w2.BBS.Front/api/forum/reply', {
+        fetch(`${window.apiRoot}/api/forum/reply`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',

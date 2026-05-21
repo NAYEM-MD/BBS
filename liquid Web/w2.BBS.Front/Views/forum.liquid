@@ -1,0 +1,193 @@
+﻿{% _layout 'layout.liquid' %}
+
+{% _area title %}掲示板{% end_area %}
+
+{% _area head_resource %}
+<link rel="stylesheet" href="{{ RootUrl | append: '/styles/style.css' | hard_reload }}" />
+{% end_area %}
+
+{% _area page_body %}
+<div class="page-wrap forum-page">
+  <h1 class="page-title page-title--with-toolbar">掲示板</h1>
+  <p class="text-muted">ログインしました。</p>
+  <p class="text-strong">ユーザー名: {{ LoginUserName }}</p>
+  <div class="forum-toolbar">
+    <a class="btn btn--outline btn--sm" href="{{ RootUrl | append: '/account/settings' }}">設定</a>
+    <form class="forum-toolbar__logout" method="post" action="{{ RootUrl | append: '/auth/logout' }}">
+      <button type="submit" class="btn btn--success btn--sm">ログアウト</button>
+    </form>
+  </div>
+  <hr class="rule" />
+  <vue-forum></vue-forum>
+</div>
+{% end_area %}
+
+{% _area component %}
+<script type="text/x-template" id="vue-forum-template">
+  <div class="card">
+    <h2 class="section-title">新規投稿</h2>
+
+    <div class="alert-box">
+      <p v-if="message">${ message }</p>
+      <p v-if="errorMessage">${ errorMessage }</p>
+    </div>
+
+    <div class="field">
+      <label class="field__label" for="postTitle">タイトル</label>
+      <input class="input" type="text" id="postTitle" v-model="newTitle" />
+    </div>
+
+    <div class="field">
+      <label class="field__label" for="postBody">本文</label>
+      <textarea class="input" id="postBody" v-model="newBody"></textarea>
+    </div>
+
+    <div class="field">
+      <button class="btn btn--primary" type="button" @click="createPost" :disabled="isSaving">投稿する</button>
+    </div>
+
+    <hr class="rule" />
+
+    <h2 class="section-title">投稿一覧</h2>
+
+    <p v-if="hasPosts === false" class="text-empty">投稿はまだありません。</p>
+
+    <div v-if="hasPosts" class="post-list">
+      <article v-for="post in posts" :key="post.PostId" class="post-card">
+        <h3 class="post-card__title">
+          <a :href="window.apiRoot + '/forum/' + post.PostId">${ post.Title }</a>
+        </h3>
+        <p class="post-card__body">${ post.Body }</p>
+        <small class="post-card__meta">投稿者: ${ post.UserName }</small>
+      </article>
+    </div>
+
+    <div class="pager">
+      <button class="btn btn--ghost" type="button" @click="movePage(page - 1)" :disabled="canPrevPage === false">前へ</button>
+      <span class="pager__label">${ pageLabel }</span>
+      <button class="btn btn--ghost" type="button" @click="movePage(page + 1)" :disabled="canNextPage === false">次へ</button>
+    </div>
+  </div>
+</script>
+
+<script>
+  {% _javascript key: "onload" %}
+  g_vueManager.setComponent('vue-forum', {
+    template: '#vue-forum-template',
+    data() {
+      return {
+        posts: [],
+        page: 1,
+        pageCount: 1,
+        totalCount: 0,
+        newTitle: '',
+        newBody: '',
+        message: '',
+        errorMessage: '',
+        isSaving: false,
+      };
+    },
+    computed: {
+      hasPosts() {
+        return this.posts.length > 0;
+      },
+      canPrevPage() {
+        return this.page > 1;
+      },
+      canNextPage() {
+        return this.page < this.pageCount;
+      },
+      pageLabel() {
+        return `${this.page} / ${this.pageCount}`;
+      },
+    },
+    mounted() {
+      this.loadPosts(1);
+    },
+    methods: {
+      loadPosts(page) {
+        const url = `${window.apiRoot}/api/forum/posts?page=${page}`;
+
+        return fetch(url)
+          .then((response) => {
+            if (response.ok === false) {
+              throw new Error(`HTTP ${response.status}`);
+            }
+
+            return response.json();
+          })
+          .then((result) => {
+            if (result.IsSuccess === false) {
+              this.errorMessage = result.Message;
+              return;
+            }
+
+            this.posts = result.Posts;
+            this.page = result.Page;
+            this.pageCount = result.PageCount;
+            this.totalCount = result.TotalCount;
+            this.errorMessage = '';
+          })
+          .catch(() => {
+            this.errorMessage = '投稿一覧の取得に失敗しました。';
+          });
+      },
+      createPost() {
+        this.message = '';
+        this.errorMessage = '';
+
+        const params = new URLSearchParams();
+        params.append('title', this.newTitle);
+        params.append('body', this.newBody);
+
+        this.isSaving = true;
+
+        fetch(`${window.apiRoot}/api/forum/create`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+          },
+          body: params.toString(),
+        })
+          .then((response) => {
+            if (response.ok === false) {
+              throw new Error(`HTTP ${response.status}`);
+            }
+
+            return response.json();
+          })
+          .then((result) => {
+            if (result.IsSuccess === false) {
+              this.errorMessage = result.Message;
+              return;
+            }
+
+            this.newTitle = '';
+            this.newBody = '';
+            this.message = result.Message;
+
+            return this.loadPosts(1);
+          })
+          .catch(() => {
+            this.errorMessage = '投稿に失敗しました。';
+          })
+          .finally(() => {
+            this.isSaving = false;
+          });
+      },
+      movePage(page) {
+        if (page < 1) {
+          return;
+        }
+
+        if (page > this.pageCount) {
+          return;
+        }
+
+        this.loadPosts(page);
+      },
+    },
+  });
+  {% end_javascript %}
+</script>
+{% end_area %}

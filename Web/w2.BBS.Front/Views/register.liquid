@@ -1,4 +1,4 @@
-﻿{% _layout 'layout.liquid' %}
+{% _layout 'layout.liquid' %}
 
 {% _area title %}会員登録{% end_area %}
 
@@ -16,7 +16,7 @@
   </div>
   {% endif %}
 
-  <form method="post" action="/Training.BBS/Web/w2.BBS.Front/auth/register">
+  <form method="post" action="{{ RootUrl | append: '/auth/register' }}">
     <div>
       <label for="loginId">ログインID</label>
       <input type="text" id="loginId" name="LoginId" value="{{ LoginId }}" />
@@ -37,7 +37,7 @@
   </form>
 
   <div class="footer-link">
-    <a href="/Training.BBS/Web/w2.BBS.Front/auth/login">ログイン画面へ戻る</a>
+    <a href="{{ RootUrl | append: '/auth/login' }}">ログイン画面へ戻る</a>
   </div>
 </div>
 {% end_area %}

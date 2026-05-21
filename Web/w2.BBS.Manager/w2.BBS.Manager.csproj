@@ -105,6 +105,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\SqlConnectionModule.cs" />
     <Compile Include="PostList.aspx.cs">
       <DependentUpon>PostList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -133,6 +134,8 @@
     </Compile>
     <Content Include="UserList.aspx" />
     <Compile Include="App_Code\Constants.cs" />
+    <Compile Include="App_Code\BbsSql.cs" />
+    <Compile Include="App_Code\ManagerPageConstants.cs" />
     <Compile Include="App_Code\AdminSession.cs" />
     <Compile Include="App_Code\AdminPageBase.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -187,7 +190,9 @@
       <Name>w2.SampleDomain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

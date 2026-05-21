@@ -142,9 +142,12 @@
     <Content Include="Scripts\vue_manager.js" />
     <Content Include="styles\style.css" />
     <Content Include="Web.config" />
-    <Content Include="Xml\Db\Sample.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\BbsSql.cs" />
+    <Compile Include="App_Code\FrontMessages.cs" />
+    <Compile Include="App_Code\FrontSession.cs" />
+    <Compile Include="App_Code\SqlConnectionModule.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
@@ -172,11 +175,9 @@
     <Compile Include="ViewModels\ForumPostDetailResponseViewModel.cs" />
     <Compile Include="ViewModels\ForumPostViewModel.cs" />
     <Compile Include="ViewModels\ForumReplyViewModel.cs" />
-    <Compile Include="ViewModels\IndexViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\_Razorは使わないでください.txt" />
-    <Content Include="Views\index.liquid" />
     <Content Include="Views\_Shared\layout.liquid" />
     <None Include="packages.config" />
     <Content Include="Views\web.config" />

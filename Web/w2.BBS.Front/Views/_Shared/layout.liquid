@@ -21,6 +21,8 @@
   <script>
     let g_vueManager = null;
 
+    window.apiRoot = window.apiRoot || '{{ RootUrl }}';
+
     window.addEventListener('DOMContentLoaded', _ => {
       g_vueManager = new VueManager();
 
@@ -28,8 +30,6 @@
 
       g_vueManager.mount();
     });
-
-    window.apiRoot = window.apiRoot || '{{ RootUrl }}'
   </script>
 </head>
 <body>

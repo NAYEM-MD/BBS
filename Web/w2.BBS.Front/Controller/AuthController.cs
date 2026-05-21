@@ -1,4 +1,6 @@
-﻿using System;
+// (c) 2026 W2 Co.,Ltd.
+
+using System;
 using System.Data.SqlClient;
 using System.Web.Mvc;
 using w2.BBS.Front.Controller.Shared;
@@ -15,47 +17,35 @@ namespace w2.BBS.Front.Controller
 		private const string VIEW_LOGIN = "login.liquid";
 		private const string VIEW_REGISTER = "register.liquid";
 
-		private const string SESSION_KEY_LOGIN_USER_ID = "LoginUserId";
-		private const string SESSION_KEY_LOGIN_USER_NAME = "LoginUserName";
-
 		private const string QUERY_KEY_REGISTERED = "registered";
+		private const string QUERY_VALUE_REGISTERED = "1";
 
 		private const string MESSAGE_REGISTER_COMPLETED = "会員登録が完了しました。ログインしてください。";
 		private const string MESSAGE_LOGIN_REQUIRED = "ログインIDとパスワードを入力してください。";
-		private const string MESSAGE_LOGIN_FAILED = "ログインIDまたはパスワードが正しくありません。";
 		private const string MESSAGE_REGISTER_REQUIRED = "すべて入力してください。";
 		private const string MESSAGE_LOGIN_ID_DUPLICATE = "そのログインIDは既に使われています。";
 
-		private const string SQL_SELECT_LOGIN_USER =
-@"SELECT TOP 1
-	user_id,
-	user_name
-FROM w2_User
-WHERE login_id = @login_id
-AND password = @password
-AND del_flg = 0";
-
 		private const string SQL_SELECT_LOGIN_ID_COUNT =
-@"SELECT COUNT(1)
-FROM w2_User
-WHERE login_id = @login_id
-AND del_flg = 0";
+			@"SELECT COUNT(1)
+			FROM w2_User
+			WHERE login_id = @login_id
+			AND del_flg = 0";
 
 		private const string SQL_INSERT_USER =
-@"INSERT w2_User
-(
-	login_id,
-	password,
-	user_name,
-	del_flg
-)
-VALUES
-(
-	@login_id,
-	@password,
-	@user_name,
-	0
-)";
+			@"INSERT w2_User
+			(
+				login_id,
+				password,
+				user_name,
+				del_flg
+			)
+			VALUES
+			(
+				@login_id,
+				@password,
+				@user_name,
+				0
+			)";
 
 		/// <summary>
 		/// ログイン画面
@@ -65,7 +55,6 @@ VALUES
 		public ActionResult Login()
 		{
 			var model = new AuthLoginViewModel();
-
 			this.SetLoginInfoMessage(model);
 
 			return base.View(VIEW_LOGIN, model);
@@ -81,20 +70,19 @@ VALUES
 		{
 			var loginModel = model ?? new AuthLoginViewModel();
 
-			if (this.ValidateLogin(loginModel) == false)
+			if (this.ValidateLogin(loginModel) is false)
 			{
 				return base.View(VIEW_LOGIN, loginModel);
 			}
 
-			if (this.TryLogin(loginModel) == false)
+			if (this.TryLogin(loginModel) is false)
 			{
-				loginModel.ErrorMessage = MESSAGE_LOGIN_FAILED;
+				loginModel.ErrorMessage = FrontMessages.MESSAGE_LOGIN_FAILED;
 				return base.View(VIEW_LOGIN, loginModel);
 			}
 
 			return this.Redirect("~/forum");
 		}
-		
 
 		/// <summary>
 		/// 会員登録画面
@@ -118,7 +106,7 @@ VALUES
 		{
 			var registerModel = model ?? new AuthRegisterViewModel();
 
-			if (this.ValidateRegister(registerModel) == false)
+			if (this.ValidateRegister(registerModel) is false)
 			{
 				return base.View(VIEW_REGISTER, registerModel);
 			}
@@ -131,7 +119,7 @@ VALUES
 
 			this.InsertUser(registerModel);
 
-			return this.Redirect("~/auth/login?registered=1");
+			return this.Redirect("~/auth/login?" + QUERY_KEY_REGISTERED + "=" + QUERY_VALUE_REGISTERED);
 		}
 
 		/// <summary>
@@ -157,8 +145,8 @@ VALUES
 				return;
 			}
 
-			var isRegistered = (this.Request.QueryString[QUERY_KEY_REGISTERED] == "1");
-			if (isRegistered == false)
+			var isRegistered = (this.Request.QueryString[QUERY_KEY_REGISTERED] == QUERY_VALUE_REGISTERED);
+			if (isRegistered is false)
 			{
 				return;
 			}
@@ -178,8 +166,8 @@ VALUES
 				return false;
 			}
 
-			var hasLoginId = string.IsNullOrWhiteSpace(model.LoginId) == false;
-			var hasPassword = string.IsNullOrWhiteSpace(model.Password) == false;
+			var hasLoginId = string.IsNullOrWhiteSpace(model.LoginId) is false;
+			var hasPassword = string.IsNullOrWhiteSpace(model.Password) is false;
 			if (hasLoginId && hasPassword)
 			{
 				return true;
@@ -201,10 +189,9 @@ VALUES
 				return false;
 			}
 
-			var hasLoginId = string.IsNullOrWhiteSpace(model.LoginId) == false;
-			var hasPassword = string.IsNullOrWhiteSpace(model.Password) == false;
-			var hasUserName = string.IsNullOrWhiteSpace(model.UserName) == false;
-	
+			var hasLoginId = string.IsNullOrWhiteSpace(model.LoginId) is false;
+			var hasPassword = string.IsNullOrWhiteSpace(model.Password) is false;
+			var hasUserName = string.IsNullOrWhiteSpace(model.UserName) is false;
 
 			if (hasLoginId
 				&& hasPassword
@@ -228,20 +215,20 @@ VALUES
 			{
 				connection.Open();
 
-				using (var command = new SqlCommand(SQL_SELECT_LOGIN_USER, connection))
+				using (var command = new SqlCommand(BbsSql.SELECT_LOGIN_USER, connection))
 				{
 					command.Parameters.AddWithValue("@login_id", model.LoginId.Trim());
 					command.Parameters.AddWithValue("@password", model.Password.Trim());
 
 					using (var reader = command.ExecuteReader())
 					{
-						if (reader.Read() == false)
+						if (reader.Read() is false)
 						{
 							return false;
 						}
 
-						this.Session[SESSION_KEY_LOGIN_USER_ID] = Convert.ToInt32(reader["user_id"]);
-						this.Session[SESSION_KEY_LOGIN_USER_NAME] = Convert.ToString(reader["user_name"]);
+						this.Session[FrontSession.SESSION_KEY_LOGIN_USER_ID] = Convert.ToInt32(reader["user_id"]);
+						this.Session[FrontSession.SESSION_KEY_LOGIN_USER_NAME] = Convert.ToString(reader["user_name"]);
 
 						return true;
 					}
@@ -276,7 +263,6 @@ VALUES
 		/// <param name="model">会員登録画面モデル</param>
 		private void InsertUser(AuthRegisterViewModel model)
 		{
-
 			using (var connection = new SqlConnection(Constants.STRING_SQL_CONNECTION))
 			{
 				connection.Open();
@@ -291,15 +277,5 @@ VALUES
 				}
 			}
 		}
-
-		/// <summary>
-		/// ログインセッションクリア
-		/// </summary>
-		private void ClearLoginSession()
-		{
-			this.Session.Remove(SESSION_KEY_LOGIN_USER_ID);
-			this.Session.Remove(SESSION_KEY_LOGIN_USER_NAME);
-		}
 	}
 }
-

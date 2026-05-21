@@ -1,4 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="w2.BBS.Manager.Form.Common.Default" %>
+<%-- // (c) 2026 W2 Co.,Ltd. --%>
 
 <!DOCTYPE html>
 <html>
@@ -12,7 +13,7 @@
 <body>
 	<form id="form1" runat="server">
 		<div class="nav">
-			<asp:Literal ID="litBrand" runat="server" />
+			<span class="brand">BBS 管理</span>
 			<asp:LinkButton ID="lbNavUserList" runat="server" CausesValidation="false" OnClick="lbNavUserList_OnClick">ユーザー一覧</asp:LinkButton>
 			<asp:LinkButton ID="lbNavPostList" runat="server" CausesValidation="false" OnClick="lbNavPostList_OnClick">投稿一覧</asp:LinkButton>
 			<asp:LinkButton ID="lbNavLogout" runat="server" CausesValidation="false" OnClick="lbNavLogout_OnClick">ログアウト</asp:LinkButton>

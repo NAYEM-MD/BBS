@@ -1,0 +1,44 @@
+﻿{% _area title %}会員登録{% end_area %}
+
+{% _area head_resource %}
+<link rel="stylesheet" href="{{ RootUrl | append: '/styles/style.css' | hard_reload }}" />
+{% end_area %}
+
+{% _area page_body %}
+<div class="register-container">
+  <h1>会員登録</h1>
+
+  {% if ErrorMessage != blank %}
+  <div class="messages">
+    <p>{{ ErrorMessage }}</p>
+  </div>
+  {% endif %}
+
+  <form method="post" action="{{ RootUrl | append: '/auth/register' }}">
+    <div>
+      <label for="loginId">ログインID</label>
+      <input type="text" id="loginId" name="LoginId" value="{{ LoginId }}" />
+    </div>
+    <div>
+      <label for="userName">ユーザー名</label>
+      <input type="text" id="userName" name="UserName" value="{{ UserName }}" />
+    </div>
+
+    <div>
+      <label for="password">パスワード</label>
+      <input type="password" id="password" name="Password" value="{{ Password }}" />
+    </div>
+
+    <div>
+      <button type="submit">登録する</button>
+    </div>
+  </form>
+
+  <div class="footer-link">
+    <a href="{{ RootUrl | append: '/auth/login' }}">ログイン画面へ戻る</a>
+  </div>
+</div>
+{% end_area %}
+
+{% _area component %}
+{% end_area %}

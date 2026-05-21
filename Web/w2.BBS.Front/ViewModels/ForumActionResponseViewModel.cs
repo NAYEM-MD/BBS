@@ -1,4 +1,6 @@
-﻿namespace w2.BBS.Front.ViewModels
+﻿// (c) 2026 W2 Co.,Ltd.
+
+namespace w2.BBS.Front.ViewModels
 {
 	/// <summary>
 	/// 掲示板処理レスポンスモデル
